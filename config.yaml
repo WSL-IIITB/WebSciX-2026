@@ -1,0 +1,59 @@
+baseURL: "https://WSL-IIITB.github.io/WebSciX-2026/"
+languageCode: "en-us"
+title: "WebSciX 2026"
+
+theme: "hugo-theme-stack"
+
+params:
+
+  sidebar:
+    subtitle: "Web Science Conference"
+    avatar:
+      enabled: true
+      local: true
+      src: img/logo.png
+
+  article:
+    toc: true
+    readingTime: true
+
+  widgets:
+    homepage:
+      - type: search
+      - type: recent
+      - type: tag-cloud
+    page:
+      - type: toc
+
+menu:
+  main:
+
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
+
+    - identifier: people
+      name: People
+      url: /people/
+      weight: 3
+
+    - identifier: program
+      name: Program
+      url: /program/
+      weight: 4
+
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 5
+
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 6
