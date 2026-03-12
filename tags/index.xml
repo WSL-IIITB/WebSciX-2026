@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on WebSciX 2026</title>
+    <link>https://WSL-IIITB.github.io/WebSciX-2026/tags/</link>
+    <description>Recent content in Tags on WebSciX 2026</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://WSL-IIITB.github.io/WebSciX-2026/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>https://WSL-IIITB.github.io/WebSciX-2026/tags/ai/</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://WSL-IIITB.github.io/WebSciX-2026/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conference</title>
+      <link>https://WSL-IIITB.github.io/WebSciX-2026/tags/conference/</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://WSL-IIITB.github.io/WebSciX-2026/tags/conference/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Science</title>
+      <link>https://WSL-IIITB.github.io/WebSciX-2026/tags/web-science/</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://WSL-IIITB.github.io/WebSciX-2026/tags/web-science/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
