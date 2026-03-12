@@ -1,133 +1,102 @@
-body {
-
+body{
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
-font-family:Arial;
-background:#0b0b15;
-color:white;
-
+background:#ffffff;
+color:#222;
 }
 
+.layout{
+display:flex;
+}
 
-header {
+/* LEFT SIDEBAR */
 
+.sidebar{
+width:230px;
+background:#f3f3f3;
 padding:20px;
-text-align:center;
-background:#111;
-
+height:100vh;
+position:fixed;
 }
 
-
-nav a {
-
-margin:15px;
-color:white;
+.sidebar nav a{
+display:block;
+padding:10px;
 text-decoration:none;
-font-weight:bold;
-
-}
-
-
-.hero {
-
-height:400px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-}
-
-
-button {
-
-padding:12px 25px;
-font-size:16px;
-border:none;
-background:#ff0055;
-color:white;
+color:#333;
 border-radius:6px;
-cursor:pointer;
-
+margin-bottom:5px;
 }
 
-
-.timeline {
-
-display:flex;
-justify-content:center;
-gap:40px;
-margin-top:30px;
-
+.sidebar nav a:hover{
+background:#e0e0e0;
 }
 
-
-.event {
-
-background:#1a1a2e;
-padding:20px;
-border-radius:10px;
-
-}
-
-
-.speaker-grid {
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-padding:40px;
-
-}
-
-
-.speaker-card {
-
-background:#1a1a2e;
-padding:20px;
-border-radius:10px;
-text-align:center;
-transition:0.3s;
-
-}
-
-
-.speaker-card:hover {
-
-transform:translateY(-8px);
-
-}
-
-
-.speaker-card img {
-
-width:100%;
+.logo img{
+width:80px;
 border-radius:50%;
-
 }
 
+/* MAIN CONTENT */
 
-.schedule {
-
-display:grid;
-gap:20px;
+.content{
+margin-left:250px;
 padding:40px;
-
+max-width:800px;
 }
 
-
-.session {
-
-background:#1a1a2e;
-padding:20px;
-border-radius:10px;
-
+.breadcrumb{
+font-size:14px;
+color:#666;
+margin-bottom:10px;
 }
 
+.meta{
+color:#777;
+font-size:14px;
+}
 
-footer {
+/* RIGHT PANEL */
 
-text-align:center;
+.rightpanel{
+width:250px;
 padding:20px;
-background:#111;
+background:#fafafa;
+border-left:1px solid #eee;
+position:fixed;
+right:0;
+top:0;
+height:100vh;
+}
+
+.search input{
+width:100%;
+padding:8px;
+}
+
+.box{
+margin-top:25px;
+}
+
+.tags span{
+display:inline-block;
+background:#eee;
+padding:5px 8px;
+border-radius:5px;
+margin:3px;
+font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+.rightpanel{
+display:none;
+}
+
+.content{
+margin-right:20px;
+}
 
 }
