@@ -1,34 +1,13 @@
-particlesJS("particles-js", {
+// smooth hover animation
 
-particles: {
+document.querySelectorAll(".sidebar a").forEach(link => {
 
-number: { value: 80 },
+link.addEventListener("mouseover",()=>{
+link.style.transform="translateX(4px)"
+})
 
-color: { value: "#ffffff" },
+link.addEventListener("mouseout",()=>{
+link.style.transform="translateX(0px)"
+})
 
-shape: { type: "circle" },
-
-opacity: { value: 0.5 },
-
-size: { value: 3 },
-
-line_linked: {
-
-enable: true,
-distance: 150,
-color: "#ffffff",
-opacity: 0.4,
-width: 1
-
-},
-
-move: {
-
-enable: true,
-speed: 3
-
-}
-
-}
-
-});
+})
