@@ -1,13 +1,28 @@
 body{
 font-family: Arial, sans-serif;
 margin:0;
-background:#f4f6f9;
+background:#0f172a;
 }
+
+/* Animated background layer */
+
+#network-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* Layout */
 
 .container{
 display:flex;
 min-height:100vh;
 }
+
+/* Sidebar */
 
 .sidebar{
 width:260px;
@@ -27,10 +42,7 @@ padding:8px 0;
 color:white;
 }
 
-.tagline{
-font-size:14px;
-margin-bottom:20px;
-}
+/* Main content */
 
 .content{
 flex:1;
@@ -38,9 +50,18 @@ background:white;
 padding:40px;
 }
 
+/* Right panel */
+
 .rightbar{
 width:260px;
 background:#f9fafb;
 padding:25px;
 border-left:1px solid #ddd;
+}
+
+/* Typography */
+
+.tagline{
+font-size:14px;
+margin-bottom:20px;
 }
