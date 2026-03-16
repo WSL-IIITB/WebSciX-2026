@@ -1,95 +1,61 @@
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#0f172a;
+/* Fade animation */
+
+.fade-in{
+opacity:0;
+animation:fadeIn 1.2s ease forwards;
 }
 
-/* animated background */
-
-#network-bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
-/* THREE PANEL GRID */
 
-.container{
-display:grid;
-grid-template-columns: 260px 1fr 260px;
-min-height:100vh;
+/* Slide up animation */
+
+.slide-up{
+opacity:0;
+animation:slideUp 1.5s ease forwards;
+animation-delay:0.4s;
 }
 
-/* LEFT PANEL */
-
-.sidebar{
-background:#111827;
-color:white;
-padding:25px;
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
-.sidebar a{
-display:block;
-color:#d1d5db;
-text-decoration:none;
-padding:8px 0;
+
+/* Section hover animation */
+
+.section-title{
+transition:all 0.3s ease;
 }
 
-.sidebar a:hover{
-color:white;
+.section-title:hover{
+color:#2563eb;
+transform:translateX(6px);
 }
 
-/* CENTER PANEL */
 
-.content{
-background:white;
-padding:40px;
+/* List hover animation */
+
+.animated-list li{
+transition:all 0.3s ease;
 }
 
-/* RIGHT PANEL */
-
-.rightbar{
-background:#f9fafb;
-padding:25px;
-border-left:1px solid #ddd;
-}
-
-/* HERO */
-
-.hero{
-display:flex;
-align-items:center;
-gap:25px;
-margin-bottom:30px;
-}
-
-.hero-logo{
-width:160px;
-}
-
-.hero-text h1{
-font-size:48px;
-margin:0;
-color:#1f3b57;
-}
-
-.theme{
-font-size:20px;
-margin-top:10px;
-color:#444;
-}
-
-/* BODY TEXT */
-
-.conference-description{
-line-height:1.7;
-font-size:17px;
-}
-
-.conference-description h2{
-margin-top:30px;
-color:#1f3b57;
+.animated-list li:hover{
+transform:translateX(8px);
+color:#2563eb;
 }
