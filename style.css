@@ -41,10 +41,12 @@ display:block;
 color:#d1d5db;
 text-decoration:none;
 padding:8px 0;
+transition:0.2s;
 }
 
 .sidebar a:hover{
 color:white;
+transform:translateX(4px);
 }
 
 /* CENTER PANEL */
@@ -57,7 +59,7 @@ margin-right:260px;
 min-height:100vh;
 }
 
-/* RIGHT PANEL (ONLY ONE DEFINITION) */
+/* RIGHT PANEL (FIXED + BLUE) */
 
 .rightbar{
 position:fixed;
@@ -65,13 +67,31 @@ right:0;
 top:0;
 width:260px;
 height:100vh;
-background:#f9fafb;
-border-left:1px solid #ddd;
+background:#111827;   /* SAME AS LEFT */
+color:white;
+border-left:1px solid rgba(255,255,255,0.1);
 padding:20px;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 overflow:hidden;
+}
+
+/* RIGHT TEXT COLORS */
+
+.rightbar h3{
+color:#e5e7eb;
+margin-bottom:8px;
+}
+
+.rightbar p{
+color:#d1d5db;
+font-size:14px;
+}
+
+.rightbar li{
+color:#d1d5db;
+font-size:14px;
 }
 
 /* HERO */
@@ -128,6 +148,7 @@ margin:10px 0;
 max-height:200px;
 overflow-y:auto;
 padding-right:5px;
+scroll-behavior:smooth;
 }
 
 .updates ul{
@@ -136,7 +157,6 @@ padding-left:18px;
 
 .updates li{
 margin-bottom:6px;
-font-size:14px;
 }
 
 /* BOTTOM */
@@ -148,11 +168,22 @@ font-size:14px;
 /* BUTTON */
 
 .submit-btn{
-color:#0066cc;
+color:#38bdf8;
 font-weight:bold;
 text-decoration:none;
 }
 
 .submit-btn:hover{
 text-decoration:underline;
+}
+
+/* SCROLLBAR (nice touch) */
+
+.updates::-webkit-scrollbar{
+width:6px;
+}
+
+.updates::-webkit-scrollbar-thumb{
+background:#334155;
+border-radius:3px;
 }
