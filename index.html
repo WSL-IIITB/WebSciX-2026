@@ -224,3 +224,47 @@ WebSciX India invites researchers, technologists, policymakers, and civil societ
 </div>
 
 </aside>
+<!-- PARTICLES LIBRARY -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("network-bg", {
+  particles: {
+    number: { value: 70 },
+    color: { value: "#38bdf8" },
+    shape: { type: "circle" },
+    opacity: { value: 0.4 },
+    size: { value: 3 },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#38bdf8",
+      opacity: 0.3,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab"
+      }
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        line_linked: { opacity: 0.7 }
+      }
+    }
+  },
+  retina_detect: true
+});
+</script>
+
+</body>
+</html>
