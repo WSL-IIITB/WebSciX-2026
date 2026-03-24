@@ -6,6 +6,7 @@ body{
 margin:0;
 font-family:Arial;
 background:#0f172a;
+overflow-x:hidden;
 }
 
 /* BACKGROUND */
@@ -28,10 +29,22 @@ background:#111827;
 color:white;
 padding:20px;
 z-index:3;
+overflow-y:auto;
 }
 
 .sidebar{ left:0; }
 .rightbar{ right:0; }
+
+.sidebar a{
+display:block;
+color:#d1d5db;
+text-decoration:none;
+padding:8px 0;
+}
+
+.sidebar a:hover{
+color:white;
+}
 
 /* CENTER */
 .content{
@@ -44,8 +57,9 @@ backdrop-filter:blur(6px);
 
 padding:40px;
 border-radius:10px;
-z-index:2;
+
 position:relative;
+z-index:2;
 }
 
 /* HERO */
@@ -53,6 +67,7 @@ position:relative;
 display:flex;
 align-items:center;
 justify-content:space-between;
+margin-bottom:30px;
 }
 
 .hero-logo{
@@ -60,8 +75,8 @@ height:100px;
 }
 
 .hero-text{
-text-align:center;
 flex:1;
+text-align:center;
 }
 
 .hero-text h1{
@@ -79,10 +94,28 @@ max-width:900px;
 line-height:1.7;
 }
 
+/* RIGHT LINKS */
+.rightbar a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+.rightbar a:hover{
+text-decoration:underline;
+}
+
+/* UPDATES */
+.updates{
+max-height:200px;
+overflow-y:auto;
+}
+
 /* SPONSORS */
 .sponsors{
-margin-top:40px;
+margin-top:50px;
 text-align:center;
+border-top:1px solid rgba(0,0,0,0.1);
+padding-top:20px;
 }
 
 .sponsor-logos{
