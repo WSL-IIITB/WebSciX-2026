@@ -115,6 +115,9 @@ margin-bottom:30px;
 
 .hero-logo{
 width:160px;
+max-width:100%;
+height:auto;
+display:block;
 }
 
 .hero-text h1{
