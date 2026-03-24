@@ -134,10 +134,26 @@ flex-wrap:wrap;
 height:50px;
 }
 
-h1, h2{
+/* MAIN TITLE */
+.hero-text h1{
+color:#0f2a44;
+}
+
+/* SECTION HEADINGS */
+.conference-description h2{
 color:#1f3b57;
 }
 
+/* OPTIONAL: keep subheading softer */
 .theme{
 color:#2c4a6b;
+}
+
+h1{
+font-weight:700;
+letter-spacing:0.5px;
+}
+
+h2{
+font-weight:600;
 }
