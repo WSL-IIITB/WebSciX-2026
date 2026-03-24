@@ -73,7 +73,9 @@ margin-bottom:30px;
 .hero-logo{
 height:100px;
 }
-
+.hero-text h1{
+color:#1f3b57;
+}
 .hero-text{
 flex:1;
 text-align:center;
@@ -89,6 +91,9 @@ font-size:18px;
 }
 
 /* TEXT */
+.conference-description h2{
+color:#1f3b57;
+}
 .conference-description{
 max-width:900px;
 line-height:1.7;
@@ -127,4 +132,12 @@ flex-wrap:wrap;
 
 .sponsor-logos img{
 height:50px;
+}
+
+h1, h2{
+color:#1f3b57;
+}
+
+.theme{
+color:#2c4a6b;
 }
