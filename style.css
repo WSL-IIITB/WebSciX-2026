@@ -93,3 +93,66 @@ font-size:17px;
 margin-top:30px;
 color:#1f3b57;
 }
+
+/* FIX RIGHT PANEL POSITION */
+
+.rightbar{
+position: fixed;
+right: 0;
+top: 0;
+width: 260px;
+height: 100vh;
+background: #fafafa;
+border-left: 1px solid #eee;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+/* TOP SECTION */
+
+.right-top{
+margin-bottom: 20px;
+}
+
+/* MIDDLE SCROLLABLE SECTION */
+
+.updates{
+max-height: 180px;
+overflow-y: auto;
+padding-right: 5px;
+}
+
+.updates ul{
+padding-left: 18px;
+}
+
+.updates li{
+margin-bottom: 6px;
+font-size: 14px;
+}
+
+/* BOTTOM SECTION */
+
+.right-bottom{
+font-size: 14px;
+}
+
+/* BUTTON STYLE */
+
+.submit-btn{
+color:#0066cc;
+font-weight:bold;
+text-decoration:none;
+}
+
+.submit-btn:hover{
+text-decoration:underline;
+}
+
+/* SHIFT MAIN CONTENT SO IT DOESN'T OVERLAP */
+
+.content{
+margin-right: 280px;
+}
