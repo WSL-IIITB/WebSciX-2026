@@ -1,10 +1,12 @@
+/* ================= GLOBAL ================= */
+
 body{
 font-family: Arial, sans-serif;
 margin:0;
 background:#0f172a;
 }
 
-/* animated background */
+/* ================= BACKGROUND ================= */
 
 #network-bg{
 position:fixed;
@@ -12,10 +14,11 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-z-index:-1;
+z-index:0;
+pointer-events:none;
 }
 
-/* THREE PANEL GRID */
+/* ================= LAYOUT ================= */
 
 .container{
 display:grid;
@@ -23,7 +26,7 @@ grid-template-columns: 260px 1fr 260px;
 min-height:100vh;
 }
 
-/* LEFT PANEL */
+/* ================= LEFT PANEL ================= */
 
 .sidebar{
 background:#111827;
@@ -34,6 +37,7 @@ position:fixed;
 left:0;
 top:0;
 width:260px;
+z-index:2;
 }
 
 .sidebar a{
@@ -49,7 +53,7 @@ color:white;
 transform:translateX(4px);
 }
 
-/* CENTER PANEL */
+/* ================= CENTER PANEL ================= */
 
 .content{
 background:white;
@@ -57,9 +61,13 @@ padding:40px;
 margin-left:260px;
 margin-right:260px;
 min-height:100vh;
+position:relative;
+z-index:1;
+box-shadow:0 0 20px rgba(0,0,0,0.2);
+border-radius:6px;
 }
 
-/* RIGHT PANEL (FIXED + BLUE) */
+/* ================= RIGHT PANEL ================= */
 
 .rightbar{
 position:fixed;
@@ -67,7 +75,7 @@ right:0;
 top:0;
 width:260px;
 height:100vh;
-background:#111827;   /* SAME AS LEFT */
+background:#111827;
 color:white;
 border-left:1px solid rgba(255,255,255,0.1);
 padding:20px;
@@ -75,26 +83,30 @@ display:flex;
 flex-direction:column;
 justify-content:space-between;
 overflow:hidden;
+z-index:2;
 }
 
-/* RIGHT TEXT COLORS */
+/* ================= RIGHT TEXT ================= */
 
 .rightbar h3{
 color:#e5e7eb;
 margin-bottom:8px;
+font-size:16px;
 }
 
 .rightbar p{
 color:#d1d5db;
 font-size:14px;
+margin:6px 0;
 }
 
 .rightbar li{
 color:#d1d5db;
 font-size:14px;
+margin-bottom:6px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
 display:flex;
@@ -119,7 +131,7 @@ margin-top:10px;
 color:#444;
 }
 
-/* BODY TEXT */
+/* ================= CONTENT TEXT ================= */
 
 .conference-description{
 line-height:1.7;
@@ -131,7 +143,7 @@ margin-top:30px;
 color:#1f3b57;
 }
 
-/* RIGHT PANEL SECTIONS */
+/* ================= RIGHT PANEL SECTIONS ================= */
 
 .right-top{
 margin-bottom:15px;
@@ -142,7 +154,7 @@ flex-grow:1;
 margin:10px 0;
 }
 
-/* SCROLLABLE UPDATES */
+/* ================= SCROLLABLE UPDATES ================= */
 
 .updates{
 max-height:200px;
@@ -153,19 +165,20 @@ scroll-behavior:smooth;
 
 .updates ul{
 padding-left:18px;
+margin:0;
 }
 
 .updates li{
 margin-bottom:6px;
 }
 
-/* BOTTOM */
+/* ================= BOTTOM ================= */
 
 .right-bottom{
 font-size:14px;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 
 .submit-btn{
 color:#38bdf8;
@@ -177,7 +190,7 @@ text-decoration:none;
 text-decoration:underline;
 }
 
-/* SCROLLBAR (nice touch) */
+/* ================= SCROLLBAR ================= */
 
 .updates::-webkit-scrollbar{
 width:6px;
