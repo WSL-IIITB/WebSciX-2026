@@ -1,5 +1,3 @@
-/* ================= GLOBAL ================= */
-
 body{
 font-family: Arial, sans-serif;
 margin:0;
@@ -7,7 +5,7 @@ background:#0f172a;
 overflow-x:hidden;
 }
 
-/* ================= BACKGROUND ================= */
+/* BACKGROUND */
 
 #network-bg{
 position:fixed;
@@ -15,18 +13,11 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-z-index:-10;        /* IMPORTANT: push behind everything */
+z-index:-10;
 pointer-events:none;
 }
 
-/* ================= LAYOUT ================= */
-
-.container{
-position:relative;
-padding-top:10px;
-}
-
-/* ================= LEFT PANEL ================= */
+/* LEFT PANEL */
 
 .sidebar{
 background:#111827;
@@ -38,7 +29,6 @@ left:0;
 top:0;
 width:260px;
 z-index:2;
-overflow-y:auto;
 }
 
 .sidebar a{
@@ -46,7 +36,6 @@ display:block;
 color:#d1d5db;
 text-decoration:none;
 padding:8px 0;
-transition:0.2s;
 }
 
 .sidebar a:hover{
@@ -54,11 +43,13 @@ color:white;
 transform:translateX(4px);
 }
 
-/* ================= CENTER PANEL ================= */
+/* CENTER PANEL (GLASS EFFECT) */
 
 .content{
-background:white;
-padding:40px;
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(6px);
+
+padding:40px 50px;
 
 margin-left:260px;
 margin-right:260px;
@@ -69,13 +60,18 @@ min-height:calc(100vh - 20px);
 position:relative;
 z-index:1;
 
-box-shadow:0 4px 20px rgba(0,0,0,0.25);
-border-radius:8px;
-
-overflow-x:hidden;
+border-radius:10px;
+box-shadow:0 4px 25px rgba(0,0,0,0.25);
 }
 
-/* ================= RIGHT PANEL ================= */
+/* TEXT */
+
+.conference-description{
+max-width:900px;
+line-height:1.8;
+}
+
+/* RIGHT PANEL */
 
 .rightbar{
 position:fixed;
@@ -83,136 +79,40 @@ right:0;
 top:0;
 width:260px;
 height:100vh;
-
 background:#111827;
 color:white;
-
-border-left:1px solid rgba(255,255,255,0.1);
 padding:20px;
-
 display:flex;
 flex-direction:column;
 justify-content:space-between;
-
 z-index:2;
-overflow-y:auto;
 }
 
-/* ================= RIGHT TEXT ================= */
-
-.rightbar h3{
-color:#e5e7eb;
-margin-bottom:8px;
-font-size:16px;
+.rightbar a{
+color:#38bdf8;
+text-decoration:none;
 }
 
-.rightbar p{
-color:#d1d5db;
-font-size:14px;
-margin:6px 0;
+.rightbar a:hover{
+text-decoration:underline;
 }
 
-.rightbar li{
-color:#d1d5db;
-font-size:14px;
-margin-bottom:6px;
-}
-
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
 display:flex;
 align-items:center;
 gap:25px;
 margin-bottom:30px;
-overflow:hidden;
 }
 
 .hero-logo{
 width:160px;
-max-width:100%;
-height:auto;
-display:block;
 }
 
-.hero-text h1{
-font-size:48px;
-margin:0;
-color:#1f3b57;
-}
-
-.theme{
-font-size:20px;
-margin-top:10px;
-color:#444;
-}
-
-/* ================= CONTENT TEXT ================= */
-
-.conference-description{
-line-height:1.7;
-font-size:17px;
-}
-
-.conference-description h2{
-margin-top:30px;
-color:#1f3b57;
-}
-
-/* ================= RIGHT PANEL SECTIONS ================= */
-
-.right-top{
-margin-bottom:15px;
-}
-
-.right-middle{
-flex-grow:1;
-margin:10px 0;
-}
-
-/* ================= SCROLLABLE UPDATES ================= */
+/* SCROLL */
 
 .updates{
 max-height:200px;
 overflow-y:auto;
-padding-right:5px;
-scroll-behavior:smooth;
-}
-
-.updates ul{
-padding-left:18px;
-margin:0;
-}
-
-.updates li{
-margin-bottom:6px;
-}
-
-/* ================= BOTTOM ================= */
-
-.right-bottom{
-font-size:14px;
-}
-
-/* ================= BUTTON ================= */
-
-.submit-btn{
-color:#38bdf8;
-font-weight:bold;
-text-decoration:none;
-}
-
-.submit-btn:hover{
-text-decoration:underline;
-}
-
-/* ================= SCROLLBAR ================= */
-
-.updates::-webkit-scrollbar{
-width:6px;
-}
-
-.updates::-webkit-scrollbar-thumb{
-background:#334155;
-border-radius:3px;
 }
