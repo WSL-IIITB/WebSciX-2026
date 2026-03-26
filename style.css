@@ -157,3 +157,16 @@ letter-spacing:0.5px;
 h2{
 font-weight:600;
 }
+/* Tablet */
+@media (max-width: 900px){
+.committee-grid{
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+/* Mobile */
+@media (max-width: 600px){
+.committee-grid{
+grid-template-columns: 1fr;
+}
+}
