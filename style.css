@@ -174,3 +174,21 @@ grid-template-columns: 1fr;
 max-width:260px;
 margin:auto;
 }
+.committee-grid{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+gap:30px;
+margin-top:20px;
+}
+
+.member{
+text-align:center;
+}
+
+.profile-img{
+width:160px;
+height:160px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+}
