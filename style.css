@@ -157,32 +157,17 @@ letter-spacing:0.5px;
 h2{
 font-weight:600;
 }
-/* Tablet */
-@media (max-width: 900px){
-.committee-grid{
-grid-template-columns: repeat(2, 1fr);
-}
-}
-
-/* Mobile */
-@media (max-width: 600px){
-.committee-grid{
-grid-template-columns: 1fr;
-}
-}
-.member{
-max-width:260px;
-margin:auto;
-}
 .committee-grid{
 display:grid;
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(3, minmax(0, 1fr));
 gap:30px;
 margin-top:20px;
+width:100%;
 }
 
 .member{
 text-align:center;
+width:100%;
 }
 
 .profile-img{
@@ -191,4 +176,10 @@ height:160px;
 object-fit:cover;
 border-radius:8px;
 margin-bottom:10px;
+}
+
+/* REMOVE width restriction */
+.conference-description{
+max-width:100%;
+line-height:1.7;
 }
