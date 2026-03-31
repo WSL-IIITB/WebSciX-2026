@@ -4,6 +4,64 @@
 <meta charset="UTF-8">
 <title>WebSciX 2026</title>
 <link rel="stylesheet" href="style.css">
+<style>
+/* Additional styles to keep original intact */
+.bangalore-section {
+  margin: 40px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(59, 130, 246, 0.1));
+  border-radius: 15px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  text-align: center;
+}
+
+.bangalore-pic {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.location-panel {
+  background: rgba(255,255,255,0.95);
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-left: 4px solid #38bdf8;
+}
+
+.map-container {
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.relevance-list {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.relevance-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(56, 189, 248, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #38bdf8;
+}
+</style>
 </head>
 
 <body>
@@ -54,11 +112,11 @@ WebSciX India is a satellite event of the ACM Web Science Conference, dedicated 
 </p>
 
 <p>
-Web Science integrates disciplines such as computer science, sociology, economics, and policy studies to explore the socio-technical dynamics of digital ecosystems. WebSciX India aims to build a regional community of experts to investigate these dynamics within India’s unique socio-cultural, economic, and technological context, proposing innovative technologies and interventions to address local challenges.
+Web Science integrates disciplines such as computer science, sociology, economics, and policy studies to explore the socio-technical dynamics of digital ecosystems. WebSciX India aims to build a regional community of experts to investigate these dynamics within India's unique socio-cultural, economic, and technological context, proposing innovative technologies and interventions to address local challenges.
 </p>
 
 <p>
-With over 800 million Internet users as of 2025, India’s digital landscape is shaped by its 1.4 billion population, diverse cultures, and rapid technological adoption. India has also made great strides in innovative use of these technologies including digital identity, payments, technology enhanced education, and a host of web enabled services offered by the state and private players. However, challenges like digital divides, misinformation, and privacy concerns remain, demanding localized Web Science approach.
+With over 800 million Internet users as of 2025, India's digital landscape is shaped by its 1.4 billion population, diverse cultures, and rapid technological adoption. India has also made great strides in innovative use of these technologies including digital identity, payments, technology enhanced education, and a host of web enabled services offered by the state and private players. However, challenges like digital divides, misinformation, and privacy concerns remain, demanding localized Web Science approach.
 </p>
 
 <h2>Scope and Focus</h2>
@@ -86,6 +144,50 @@ Join WebSciX India to shape the future of Web Science and AI for inclusive growt
 
 </div>
 
+<!-- BANGALORE HIGHLIGHT SECTION -->
+<div class="bangalore-section">
+<h2>🌆 Why Bangalore?</h2>
+
+<img src="https://images.unsplash.com/photo-1578969398141-9d7b76b3a875?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Bangalore Skyline" class="bangalore-pic">
+
+<p><strong>India's Silicon Valley - Perfect Host for WebSciX 2026</strong></p>
+
+<p>Bangalore, the technology capital of India, is home to over 7,000 tech startups, 25% of India's unicorn companies, and hosts the largest concentration of AI/ML researchers in the country. With its thriving tech ecosystem and position as India's digital innovation hub, Bangalore is the ideal venue for exploring Web Science and AI's impact on society.</p>
+
+<ul class="relevance-list">
+<li><strong>Tech Innovation Hub:</strong> Home to Google, Microsoft, Amazon R&D centers and India's largest AI research community</li>
+<li><strong>Startup Capital:</strong> 40% of India's SaaS unicorns and 1/3rd of all tech startups</li>
+<li><strong>Academic Excellence:</strong> Hosts IIIT-Bangalore, IISc, and numerous premier tech institutions</li>
+<li><strong>Diverse Talent Pool:</strong> 1.5 million IT professionals driving digital transformation</li>
+<li><strong>Policy Leadership:</strong> Karnataka's AI policy framework influences national digital strategy</li>
+</ul>
+</div>
+
+<!-- LOCATION PANEL (Moved from right sidebar) -->
+<div class="location-panel">
+<h2>📍 Conference Venue</h2>
+<p><strong>IIIT Bangalore, India</strong></p>
+
+<div class="map-container" id="iiitb-map"></div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+<div>
+<strong>🚌 Metro:</strong> Benniganahalli (Purple Line) - 15 mins
+</div>
+<div>
+<strong>🚗 Airport:</strong> 45 km - 75 mins drive
+</div>
+<div>
+<strong>🚆 Railway:</strong> Cantonment Station - 20 mins
+</div>
+<div>
+<strong>🛺 Cabs:</strong> Uber/Ola available 24/7
+</div>
+</div>
+
+<p><em>Campus offers free WiFi, dining halls, and ample parking</em></p>
+</div>
+
 <!-- SPONSORS -->
 <div class="sponsors">
 <h2>Co-hosted By</h2>
@@ -101,7 +203,7 @@ Join WebSciX India to shape the future of Web Science and AI for inclusive growt
 
 </main>
 
-<!-- RIGHT SIDEBAR -->
+<!-- RIGHT SIDEBAR (Updated - removed location panel) -->
 <aside class="rightbar">
 
 <div>
@@ -137,15 +239,42 @@ Join WebSciX India to shape the future of Web Science and AI for inclusive growt
 <div>
 <h3>Conference Theme</h3>
 <p>20 Years of Web Science</p>
-
-<h3>Location</h3>
-<p>India (TBA)</p>
 </div>
 
 </aside>
 
 <!-- PARTICLES -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<!-- MAP SCRIPT -->
+<script>
+function initMap() {
+  const iiitb = { lat: 12.9228, lng: 77.6552 };
+  const map = new google.maps.Map(document.getElementById("iiitb-map"), {
+    zoom: 15,
+    center: iiitb,
+    mapTypeId: "roadmap",
+    styles: [
+      { featureType: "poi", stylers: [{ visibility: "off" }] }
+    ]
+  });
+  
+  new google.maps.Marker({
+    position: iiitb,
+    map: map,
+    title: "IIIT Bangalore",
+    icon: {
+      url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    }
+  });
+}
+
+// Load Google Maps API
+const script = document.createElement("script");
+script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&loading=async`;
+script.async = true;
+document.head.appendChild(script);
+</script>
 
 <script>
 particlesJS("network-bg", {
