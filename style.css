@@ -204,8 +204,26 @@ border-radius:6px;
 
 box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-.bangalore-pic:hover,
-.iiitb-landscape img:hover{
-transform:scale(1.02);
-transition:0.3s;
+.iiitb-landscape img{
+display:block;
+width:100%;            /* never exceed container */
+max-width:100%;        /* 🔥 critical fix */
+height:320px;          /* controlled height */
+object-fit:cover;
+
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+margin: 0 auto;
+}
+  .bangalore-pic{
+display:block;
+margin: 0 auto;
+
+width:100%;
+max-width:900px;   /* 🔥 increased from 800px */
+
+height:420px;      /* slightly taller */
+object-fit:cover;
+
+border-radius:15px;
 }
