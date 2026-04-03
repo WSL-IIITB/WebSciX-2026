@@ -183,3 +183,20 @@ margin-bottom:10px;
 max-width:100%;
 line-height:1.7;
 }
+.about-logos{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+margin:20px 0 30px 0;
+flex-wrap:wrap;
+}
+
+.about-logos img{
+height:70px;
+object-fit:contain;
+background:white;
+padding:10px;
+border-radius:6px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
