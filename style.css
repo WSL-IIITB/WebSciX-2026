@@ -189,14 +189,19 @@ justify-content:center;
 align-items:center;
 gap:40px;
 margin:20px 0 30px 0;
-flex-wrap:wrap;
+flex-wrap:nowrap;   /* 🔥 FORCE ONE ROW */
 }
 
+/* FIX IMAGE SIZE */
+
 .about-logos img{
-height:70px;
-object-fit:contain;
+width:150px;        /* 🔥 uniform width */
+height:80px;        /* 🔥 uniform height */
+object-fit:contain; /* keeps proportions */
+
 background:white;
 padding:10px;
 border-radius:6px;
+
 box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
