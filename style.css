@@ -193,3 +193,8 @@ transition:0.3s;
 filter: grayscale(0%);
 opacity:1;
 }
+.bangalore-pic:hover,
+.iiitb-landscape img:hover{
+transform:scale(1.02);
+transition:0.3s;
+}
