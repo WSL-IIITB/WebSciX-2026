@@ -1,7 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Previous Proceedings | WebSciX 2026</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div id="network-bg"></div>
+
+<!-- LEFT PANEL -->
+<aside class="sidebar">
+<h2>WebSciX</h2>
+
+<nav>
+<a href="../index.html">Home</a>
+<a href="about.html">About</a>
+<a href="committee.html">Committee</a>
+<a href="speakers.html">Speakers</a>
+<a href="announcements.html">Announcements</a>
+<a href="call-for-papers.html">Call for Papers</a>
+<a href="proceedings.html">Previous Proceedings</a>
+</nav>
+</aside>
+
+<!-- CENTER -->
+<main class="content">
+
+<div class="conference-description">
+
 <h1>Previous Proceedings</h1>
 
+<h2>WebSciX India</h2>
+
+<p>
+WebSciX India is a proposed satellite event of the ACM Web Science Conference, dedicated to advancing the interdisciplinary study of the Internet, World Wide Web (WWW), and Artificial Intelligence (AI) and their impact on human lives in India and surrounding regions. WebSciX builds upon the Web Science for Development (WS4D) series of events conducted in India since 2019.
+</p>
+
+<p>
+Web Science integrates disciplines such as computer science, sociology, economics, and policy studies to explore the socio-technical dynamics of digital ecosystems. WebSciX India aims to build a regional community of experts to investigate these dynamics within India’s unique socio-cultural, economic, and technological context, proposing innovative technologies and interventions to address local challenges.
+</p>
+
+<p>
+With over 800 million Internet users as of 2025, India’s digital landscape is shaped by its 1.4 billion population, diverse cultures, and rapid technological adoption. India has also made great strides in innovative use of these technologies including digital identity, payments, technology-enhanced education, and a host of web-enabled services offered by the state and private players. However, challenges like digital divides, misinformation, and privacy concerns remain, demanding a localized Web Science approach.
+</p>
+
+<!-- FOCUS -->
+<h2>Scope and Focus</h2>
+
 <ul>
-<li>WebSciX 2025 – Link</li>
-<li>WebSciX 2024 – Link</li>
-<li>WebSciX 2023 – Link</li>
+<li>Address region-specific issues such as multilingual content, rural connectivity, and digital literacy.</li>
+<li>Examine AI and Web impacts on key sectors like commerce, education, and public services.</li>
+<li>Propose inclusive and scalable interventions for equitable digital access.</li>
 </ul>
+
+<!-- OBJECTIVES -->
+<h2>Objectives</h2>
+
+<ul>
+<li><strong>Community Building:</strong> Establish a regional network of interdisciplinary experts, including researchers, technologists, social scientists, and policymakers.</li>
+
+<li><strong>Localized Research:</strong> Promote research addressing India-specific issues such as Digital Public Infrastructure (DPI), digital inclusion, misinformation, data privacy, and AI’s socio-economic implications.</li>
+
+<li><strong>Innovative Solutions:</strong> Develop technologies, policies, and frameworks to tackle challenges and leverage opportunities in India’s digital ecosystem.</li>
+
+<li><strong>Global-Local Integration:</strong> Connect global Web Science research with India’s priorities to ensure impactful and relevant outcomes.</li>
+</ul>
+
+<!-- TARGET AUDIENCE -->
+<h2>Target Audience</h2>
+
+<ul>
+<li>Academics and Researchers across computer science, sociology, anthropology, economics, and policy studies.</li>
+
+<li>Technologists and Industry Experts working on AI, Web platforms, and digital infrastructure.</li>
+
+<li>Policymakers and Regulators shaping digital governance and policy frameworks.</li>
+
+<li>Civil Society and NGOs focused on digital inclusion, privacy, and societal well-being.</li>
+
+<li>Students and early-career researchers interested in interdisciplinary Web Science.</li>
+</ul>
+
+<!-- EXPECTED OUTCOMES -->
+<h2>Expected Outcomes</h2>
+
+<ul>
+<li><strong>Research Collaboration:</strong> Formation of interdisciplinary research groups focused on India’s digital challenges.</li>
+
+<li><strong>Knowledge Repository:</strong> Publication of proceedings including research papers and policy briefs.</li>
+
+<li><strong>Community Network:</strong> Establishment of a WebSciX India community across platforms and forums.</li>
+
+<li><strong>Actionable Interventions:</strong> Proposals addressing digital inclusion, misinformation, and ethical AI use.</li>
+
+<li><strong>Global Contribution:</strong> Strengthened representation of India in the global ACM Web Science Conference ecosystem.</li>
+</ul>
+
+<!-- EVENTS -->
+<h2>Past Events and Proceedings</h2>
+
+<ul>
+<li><strong>WebSciX 2025</strong></li>
+<li><strong>WS4D Workshops</strong></li>
+<li><strong>WS4D 2024</strong></li>
+<li><strong>WS4D 2023</strong></li>
+<li><strong>WSDC 2021</strong></li>
+<li><strong>WS4D 2021</strong></li>
+<li><strong>WS4D 2020</strong></li>
+</ul>
+
+<p>
+These events have collectively contributed to building a strong foundation for Web Science research in India, fostering interdisciplinary collaboration and enabling meaningful discourse on the societal impact of the web.
+</p>
+
+</div>
+
+</main>
+
+<!-- RIGHT PANEL -->
+<aside class="rightbar">
+
+<div>
+<h3>Proceedings</h3>
+<p>Explore past WebSciX and WS4D events and research contributions.</p>
+</div>
+
+<div>
+<h3>Highlights</h3>
+<ul>
+<li>Interdisciplinary Research</li>
+<li>AI & Society</li>
+<li>Digital Public Infrastructure</li>
+<li>Policy & Governance</li>
+</ul>
+</div>
+
+<div>
+<h3>Timeline</h3>
+<ul>
+<li>2025 – WebSciX</li>
+<li>2024 – WS4D</li>
+<li>2023 – WS4D</li>
+<li>2021 – WSDC / WS4D</li>
+<li>2020 – WS4D</li>
+</ul>
+</div>
+
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script src="../particles-config.js"></script>
+
+</body>
+</html>
