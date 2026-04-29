@@ -1,0 +1,323 @@
+/* ================= GLOBAL ================= */
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f172a;
+overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+#network-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+pointer-events:none;
+}
+
+/* ================= SIDEBARS ================= */
+
+.sidebar, .rightbar{
+position:fixed;
+top:0;
+width:260px;
+height:100vh;
+background:#111827;
+color:white;
+padding:20px;
+z-index:3;
+overflow-y:auto;
+}
+
+.sidebar{ left:0; }
+.rightbar{ right:0; }
+
+.sidebar a{
+display:block;
+color:#d1d5db;
+text-decoration:none;
+padding:8px 0;
+transition:0.2s;
+}
+
+.sidebar a:hover{
+color:white;
+transform:translateX(4px);
+}
+
+/* ================= CENTER PANEL ================= */
+
+.content{
+margin-left:260px;
+margin-right:260px;
+margin-top:20px;
+
+background:rgba(255,255,255,0.92);
+backdrop-filter:blur(6px);
+
+padding:40px;
+border-radius:10px;
+
+position:relative;
+z-index:2;
+
+width:calc(100% - 520px); /* 🔥 FIX CUT ISSUE */
+}
+
+/* ================= HERO ================= */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+margin-bottom:30px;
+}
+
+.hero-logo{
+height:100px;
+object-fit:contain;
+}
+
+.hero-text{
+flex:1;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:42px;
+margin:0;
+color:#0f2a44;
+}
+
+.theme{
+font-size:18px;
+color:#2c4a6b;
+}
+
+/* ================= TEXT ================= */
+
+.conference-description{
+max-width:100%;
+line-height:1.7;
+}
+
+.conference-description h2{
+color:#1f3b57;
+margin-top:30px;
+}
+
+h1{
+font-weight:700;
+letter-spacing:0.5px;
+}
+
+h2{
+font-weight:600;
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.rightbar a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+.rightbar a:hover{
+text-decoration:underline;
+}
+
+/* ================= UPDATES ================= */
+
+.updates{
+max-height:200px;
+overflow-y:auto;
+}
+
+/* ================= BENGALURU IMAGE ================= */
+
+.bangalore-pic{
+display:block;
+margin:0 auto;
+width:100%;
+max-width:900px;
+height:420px;
+object-fit:cover;
+border-radius:15px;
+}
+
+/* ================= IIITB LANDSCAPE ================= */
+
+.iiitb-landscape{
+margin-top:30px;
+text-align:center;
+}
+
+.iiitb-landscape img{
+display:block;
+width:100%;
+max-width:100%;
+height:320px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+margin:0 auto;
+}
+
+.caption{
+font-size:14px;
+color:#555;
+margin-top:8px;
+}
+
+/* ================= ABOUT LOGOS ================= */
+
+.about-logos{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+margin:20px 0 30px 0;
+flex-wrap:nowrap;
+}
+
+.about-logos img{
+width:150px;
+height:80px;
+object-fit:contain;
+background:white;
+padding:10px;
+border-radius:6px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ================= COMMITTEE GRID ================= */
+
+.committee-grid{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+gap:30px;
+margin-top:20px;
+width:100%;
+}
+
+.member{
+text-align:center;
+}
+
+.profile-img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+/* ================= SPONSORS ================= */
+
+.sponsors{
+margin-top:50px;
+text-align:center;
+border-top:1px solid rgba(0,0,0,0.1);
+padding-top:20px;
+}
+
+.sponsor-logos{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.sponsor-logos img{
+height:50px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:900px){
+.committee-grid{
+grid-template-columns: repeat(2,1fr);
+}
+}
+
+@media (max-width:600px){
+.committee-grid{
+grid-template-columns: 1fr;
+}
+
+.sidebar, .rightbar{
+display:none;
+}
+
+.content{
+margin:10px;
+width:auto;
+}
+}
+
+<!-- STYLES -->
+<style>
+.rightbar {
+  padding: 16px;
+}
+
+.cfp-dates-table {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.cfp-dates-table h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.dates-table thead {
+  background-color: #f5f7fa;
+}
+
+.dates-table th {
+  text-align: left;
+  padding: 10px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.dates-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #444;
+}
+
+.dates-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.dates-table tbody tr:hover {
+  background-color: #f1f5f9;
+  transition: 0.2s ease;
+}
+
+.dates-table strong {
+  color: #000;
+}
+</style>
