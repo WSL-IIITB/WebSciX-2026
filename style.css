@@ -920,3 +920,6 @@ body::before {
   border: 1px solid var(--border-color, rgba(0,0,0,0.15));
   color: var(--tag-color, var(--text-muted));
 }
+.page-header {
+  position: relative; /* add this if not present */
+}
