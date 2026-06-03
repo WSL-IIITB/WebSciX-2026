@@ -195,6 +195,12 @@ body::before {
   position: relative;
   overflow: hidden;
 }
+.page-header {
+  position: relative; /* add this line */
+  background: var(--navy);
+  padding: 36px 60px 30px;
+  border-bottom: 1px solid var(--border);
+}
 
 .site-hero::before {
   content: '';
