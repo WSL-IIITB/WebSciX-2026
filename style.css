@@ -133,7 +133,7 @@ body::before {
 
 /* ---- Right panel ---- */
 .rightbar {
-  width: 220px;
+  width: 240px;
   min-height: 100vh;
   background: var(--navy-mid);
   border-left: 1px solid var(--border);
