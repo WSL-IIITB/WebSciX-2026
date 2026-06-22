@@ -1,0 +1,975 @@
+/* ============================================================
+   WebSciX 2026 — Academic Conference Design System
+   Aesthetic: Scholarly · Refined · Subtle depth
+   Palette: Deep navy / warm white / gold accent
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+/* ---- Variables ---- */
+:root {
+  --navy:       #0e1e35;
+  --navy-mid:   #162844;
+  --navy-light: #1e3a5f;
+  --gold:       #c8a84b;
+  --gold-light: #e2c97e;
+  --cream:      #faf8f4;
+  --warm-white: #f5f2ec;
+  --text:       #1a1a2e;
+  --text-muted: #5a5a72;
+  --border:     rgba(200,168,75,0.25);
+  --sidebar-w:  230px;
+  --radius:     6px;
+  --shadow:     0 4px 24px rgba(14,30,53,0.12);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy);
+  color: var(--text);
+  overflow-x: hidden;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ---- Subtle background texture ---- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(200,168,75,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(30,58,95,0.4) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.page-shell {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: var(--navy-mid);
+  border-right: 1px solid var(--border);
+  padding: 0;
+  position: fixed;
+  top: 0; left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.sidebar-brand {
+  padding: 28px 22px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-brand .conf-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold-light);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.sidebar-brand .conf-year {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 4px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sidebar nav {
+  padding: 16px 0;
+  flex: 1;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 9px 22px;
+  transition: all 0.2s;
+  border-left: 2px solid transparent;
+  letter-spacing: 0.02em;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: #fff;
+  background: rgba(200,168,75,0.08);
+  border-left-color: var(--gold);
+}
+
+.sidebar-footer {
+  padding: 16px 22px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.5;
+}
+
+/* ---- Right panel ---- */
+.rightbar {
+  width: 220px;
+  min-height: 100vh;
+  background: var(--navy-mid);
+  border-left: 1px solid var(--border);
+  padding: 28px 18px;
+  position: fixed;
+  top: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightbar h3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.rightbar p, .rightbar li {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+.rightbar a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+  font-size: 12.5px;
+  transition: color 0.2s;
+}
+.rightbar a:hover { color: var(--gold-light); }
+
+.rightbar ul { list-style: none; }
+
+/* Fix: dates card inside rightbar — override dark table cell text */
+.rightbar .dates-card { border-radius: 4px; overflow: hidden; }
+.rightbar .dates-table td { font-size: 11.5px; padding: 9px 12px; color: rgba(255,255,255,0.8); }
+.rightbar .dates-table .date-val { font-size: 11px; }
+
+/* ---- Workshop banner ---- */
+.ws-banner {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 20px;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ws-banner img.ws-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.ws-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,20,40,0.88) 0%, rgba(10,20,40,0.3) 60%, transparent 100%);
+  z-index: 1;
+}
+
+.ws-banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 24px 28px;
+}
+
+.ws-banner-content .ws-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.ws-banner-content h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ---- Main content ---- */
+.content-wrap {
+  margin-left: var(--sidebar-w);
+  margin-right: 220px;
+  min-height: 100vh;
+  background: var(--cream);
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+
+/* — Hero Banner — */
+.site-hero {
+  background: var(--navy);
+  padding: 52px 60px 44px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -80px;
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(200,168,75,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 900px;
+}
+
+.hero-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.hero-logo {
+  height: 68px;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+.hero-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--border);
+}
+
+.hero-text { flex: 1; }
+
+.hero-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.hero-theme {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+  font-family: 'EB Garamond', serif;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+}
+
+.hero-meta-item .dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* — Section wrapper — */
+.page-section {
+  padding: 44px 60px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.page-section:last-child { border-bottom: none; }
+
+/* — Section heading — */
+.section-head {
+  margin-bottom: 24px;
+}
+
+.section-head h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-head h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  opacity: 0.5;
+  max-width: 180px;
+  margin-left: 8px;
+}
+
+.section-head .lead {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  font-style: italic;
+  font-family: 'EB Garamond', serif;
+}
+
+/* — Body prose — */
+.prose p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.prose h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 19px;
+  color: var(--navy);
+  font-weight: 500;
+  margin: 28px 0 10px;
+}
+
+.prose ul, .prose ol {
+  padding-left: 22px;
+  margin-bottom: 16px;
+}
+
+.prose li {
+  font-size: 14.5px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.prose a { color: var(--navy-light); }
+
+/* — Gold rule — */
+.gold-rule {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 36px 0;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   IMPORTANT DATES CARD
+   ============================================================ */
+
+.dates-card {
+  background: var(--navy);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.dates-card-header {
+  background: var(--navy-mid);
+  padding: 14px 22px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--border);
+}
+
+.dates-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dates-table td {
+  padding: 13px 22px;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(200,168,75,0.1);
+  color: rgba(255,255,255,0.75);
+}
+
+.dates-table tr:last-child td { border-bottom: none; }
+
+.dates-table .milestone { font-weight: 400; }
+
+.dates-table .date-val {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--gold-light);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.dates-table tr.highlight-row td {
+  background: rgba(200,168,75,0.06);
+  color: #fff;
+}
+
+/* ============================================================
+   TOPIC CARDS
+   ============================================================ */
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.topic-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  border-top: 3px solid var(--gold);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.topic-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.topic-card h4 {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.topic-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.topic-card li {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  line-height: 1.5;
+}
+.topic-card li::before {
+  content: '–  ';
+  color: var(--gold);
+}
+
+/* ============================================================
+   COMMITTEE GRID
+   ============================================================ */
+
+.committee-section h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+  margin: 32px 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(200,168,75,0.3);
+}
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.member-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.member-card:hover { box-shadow: var(--shadow); }
+
+.member-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(200,168,75,0.4);
+  margin-bottom: 12px;
+}
+
+.member-card a { text-decoration: none; }
+
+.member-card h4 {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.member-card .role {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.member-card p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   WST HISTORY BLOCK
+   ============================================================ */
+
+.wst-block {
+  background: var(--navy);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 36px 40px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 32px;
+}
+
+.wst-block .wst-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.wst-block h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.wst-block p {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 14px;
+}
+
+.wst-block a {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+.wst-logo {
+  width: 120px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  filter: brightness(0) invert(1) opacity(0.7);
+}
+
+/* Timeline for history */
+.history-timeline {
+  position: relative;
+  padding-left: 24px;
+  margin: 24px 0;
+}
+
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 6px; bottom: 6px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 22px;
+  padding-left: 16px;
+}
+
+.timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: -20px; top: 6px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.timeline-entry .year {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.timeline-entry p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   SUBMISSION BOX
+   ============================================================ */
+
+.submission-box {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.submission-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 200px; height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+.submission-box h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.submission-box p {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.submission-box ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.submission-box li {
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.submit-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  padding: 13px 34px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.submit-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   LOCATION & VENUE
+   ============================================================ */
+
+.venue-hero-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 28px;
+}
+
+.venue-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.09);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin-bottom: 22px;
+  border-left: 4px solid var(--gold);
+}
+
+.venue-card h4 {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.venue-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.transport-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.transport-table th {
+  background: var(--navy);
+  color: rgba(255,255,255,0.8);
+  font-family: 'Space Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  text-align: left;
+}
+
+.transport-table td {
+  padding: 13px 18px;
+  font-size: 13.5px;
+  color: #444;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.transport-table tr:last-child td { border-bottom: none; }
+.transport-table tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+
+.map-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  margin-top: 24px;
+}
+
+/* ============================================================
+   PREVIOUS PROCEEDINGS / WORKSHOP
+   ============================================================ */
+
+.proceedings-list {
+  list-style: none;
+  padding: 0;
+}
+
+.proceedings-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.proceedings-list li:last-child { border-bottom: none; }
+
+.proceedings-list .proc-year {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  min-width: 44px;
+}
+
+.proceedings-list a {
+  color: var(--navy-light);
+  text-decoration: none;
+}
+.proceedings-list a:hover { text-decoration: underline; }
+
+/* ============================================================
+   PAGE HEADER (inner pages)
+   ============================================================ */
+
+.page-header {
+  background: var(--navy);
+  padding: 36px 60px 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-header .breadcrumb {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 10px;
+}
+
+.page-header .breadcrumb a {
+  color: rgba(255,255,255,0.35);
+  text-decoration: none;
+}
+
+.page-header .breadcrumb a:hover { color: var(--gold-light); }
+
+.page-header h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 34px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.page-header .subtitle {
+  font-size: 15px;
+  color: rgba(255,255,255,0.5);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* ============================================================
+   WORKSHOP PAGE
+   ============================================================ */
+
+.workshop-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  margin-bottom: 20px;
+  border-top: 3px solid var(--navy);
+  transition: box-shadow 0.2s;
+}
+
+.workshop-card:hover { box-shadow: var(--shadow); }
+
+.workshop-card .ws-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.workshop-card h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.workshop-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  :root { --sidebar-w: 200px; }
+  .rightbar { width: 190px; }
+  .content-wrap { margin-right: 190px; }
+}
+
+@media (max-width: 860px) {
+  .sidebar, .rightbar { display: none; }
+  .content-wrap { margin: 0; }
+  .site-hero, .page-section, .page-header { padding-left: 24px; padding-right: 24px; }
+  .hero-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+
+.text-gold  { color: var(--gold); }
+.text-navy  { color: var(--navy); }
+.text-muted { color: var(--text-muted); }
+.font-mono  { font-family: 'Space Mono', monospace; }
+.font-serif { font-family: 'EB Garamond', serif; }
+
+.tag {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color, rgba(0,0,0,0.15));
+  color: var(--tag-color, var(--text-muted));
+}
