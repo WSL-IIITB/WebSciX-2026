@@ -123,6 +123,18 @@ body::before {
   border-left-color: var(--gold);
 }
 
+.sidebar nav a.nav-download {
+  color: var(--gold-light);
+  margin-top: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.sidebar nav a.nav-download:hover {
+  color: #fff;
+  background: rgba(200,168,75,0.14);
+}
+
 .sidebar-footer {
   padding: 16px 22px;
   border-top: 1px solid var(--border);
