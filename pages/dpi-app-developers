@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Call for App Developers — WebSciX 2026</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+<div class="page-shell">
+
+
+<!-- =====================================================
+     LEFT SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+  <div class="sidebar-brand">
+
+    <img
+      src="../assets/webscix-logo.png"
+      alt="WebSciX"
+      style="height:36px;margin-bottom:8px;display:block;filter:brightness(1.1);"
+    >
+
+    <div class="conf-name">
+      WebSciX 2026
+    </div>
+
+    <div class="conf-year">
+      Bengaluru · Nov 26–28
+    </div>
+
+  </div>
+
+
+  <nav>
+
+    <a href="../index.html">
+      Home
+    </a>
+
+    <a href="about.html">
+      About &amp; History
+    </a>
+
+    <a href="Committee.html">
+      Committee
+    </a>
+
+    <a href="workshop.html" class="active">
+      Workshop
+    </a>
+
+    <a href="call-for-papers.html">
+      Call for Papers
+    </a>
+
+    <a href="location.html">
+      Venue &amp; Travel
+    </a>
+
+    <a href="proceedings.html">
+      Proceedings
+    </a>
+
+    <a
+      href="../assets/WebSciX-2026-Brochure.pdf"
+      download
+      class="nav-download"
+    >
+      Download Brochure ↓
+    </a>
+
+  </nav>
+
+
+  <div class="sidebar-footer">
+
+    Workshop Chair:<br>
+    Dr. Jayati Deshmukh
+
+  </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<div class="content-wrap">
+
+
+  <!-- PAGE HEADER -->
+
+  <div class="page-header">
+
+    <div class="breadcrumb">
+
+      <a href="../index.html">
+        Home
+      </a>
+
+      /
+
+      <a href="workshop.html">
+        Workshop
+      </a>
+
+      /
+
+      Call for App Developers
+
+    </div>
+
+
+    <h1>
+      Call for App Developers
+    </h1>
+
+    <p class="subtitle">
+      Build the Future of Personal Data Empowerment with AnumatiDPI
+    </p>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       INTRODUCTION
+  ====================================================== -->
+
+  <section class="page-section">
+
+    <div class="section-head">
+
+      <h2>
+        Call for App Developers
+      </h2>
+
+      <p class="lead">
+        Build the Future of Personal Data Empowerment with AnumatiDPI
+      </p>
+
+    </div>
+
+
+    <div class="prose">
+
+      <p>
+        Digital Public Infrastructures (DPIs) are transforming how we
+        interact with technology at scale, but true data privacy requires
+        more than just checking an "accept" box.
+      </p>
+
+      <p>
+        We are inviting developers, app builders, and innovators to build
+        the next generation of privacy-first applications powered by
+        AnumatiDPI.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <hr class="gold-rule">
+
+
+
+  <!-- =====================================================
+       WHAT IS ANUMATIDPI
+  ====================================================== -->
+
+  <section class="page-section">
+
+    <div class="section-head">
+
+      <h2>
+        What is AnumatiDPI?
+      </h2>
+
+    </div>
+
+
+    <div class="prose">
+
+      <p>
+        AnumatiDPI is a modular and extensible consent manager
+        specifically engineered for Digital Public Infrastructures.
+        Unlike traditional, application-specific consent managers,
+        AnumatiDPI acts as an application-agnostic trust layer.
+      </p>
+
+      <p>
+        It routes data permissions via standardized consent artifacts
+        without ever touching the underlying data payload itself while
+        ensuring adherence to privacy regulations.
+      </p>
+
+      <p>
+        Its domain-agnostic design seamlessly bridges multiple
+        heterogeneous applications across a digital ecosystem.
+      </p>
+
+      <p>
+        Similar to modern payment gateways that function over standard
+        interoperable protocols like UPI (Unified Payments Interface),
+        a DPI consent manager becomes part of the application flow
+        without being tied to any single platform.
+      </p>
+
+      <p>
+        AnumatiDPI itself does not manage, store, or process the
+        underlying personal data. Instead, it handles standardized
+        consent tokens, completely decoupling permission routing from
+        actual data payloads.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       EXPLORE ARCHITECTURE
+  ====================================================== -->
+
+  <section class="page-section">
+
+    <div class="section-head">
+
+      <h2>
+        Explore the Architecture
+      </h2>
+
+    </div>
+
+
+    <div class="prose">
+
+      <p>
+        Before drafting your proposal, we highly encourage applicants
+        to explore the foundational concepts and architecture of the
+        framework through the explainer videos.
+      </p>
+
+
+      <div class="developer-resources">
+
+        <div class="resource-item">
+
+          <h3>
+            How DPI Consent Managers Protect Your Data
+          </h3>
+
+          <p>
+            Understand how DPI consent managers differ fundamentally
+            from traditional application-specific managers by
+            decoupling consent routing from data processing.
+          </p>
+
+        </div>
+
+
+        <div class="resource-item">
+
+          <h3>
+            How AnumatiDPI Shares Access, Not Data
+          </h3>
+
+          <p>
+            A short video on the concept of X-nodes of AnumatiDPI
+            that enables users to share access in a DPI context,
+            without sharing actual data.
+          </p>
+
+        </div>
+
+
+        <div class="resource-item">
+
+          <h3>
+            How AnumatiDPI Tracks Data Ownership
+          </h3>
+
+          <p>
+            A short explainer video on the X-node architecture of
+            AnumatiDPI and its sharing primitives that protect
+            data ownership.
+          </p>
+
+        </div>
+
+
+        <div class="resource-item">
+
+          <h3>
+            AnumatiDPI &amp; Data Sovereignty:
+            Key Building Blocks
+          </h3>
+
+          <p>
+            Dive deeper into the architectural mechanics of
+            AnumatiDPI, including Semantic Lockers, policy rules,
+            and X-Nodes; and learn how to enable highly precise
+            data exchange operations.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <p style="margin-top:25px;">
+
+        <a
+          href="https://anumati.iiitb.ac.in/"
+          target="_blank"
+          rel="noopener"
+          class="resource-link"
+        >
+          Explore AnumatiDPI →
+        </a>
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <hr class="gold-rule">
+
+
+
+  <!-- =====================================================
+       PROPOSAL GUIDELINES
+  ====================================================== -->
+
+  <section class="page-section">
+
+    <div class="section-head">
+
+      <h2>
+        Proposal Guidelines
+      </h2>
+
+    </div>
+
+
+    <div class="prose">
+
+      <p>
+        We are looking for visionary applications that leverage
+        AnumatiDPI to solve real-world challenges across domains —
+        be it healthcare, education, finance, or governance.
+      </p>
+
+      <p>
+        Interested developers should submit a
+        <strong>2-page proposal document</strong> covering the
+        following areas:
+      </p>
+
+
+      <div class="proposal-list">
+
+
+        <div class="proposal-item">
+
+          <span class="proposal-number">
+            01
+          </span>
+
+          <div>
+
+            <h3>
+              The Proposed App
+            </h3>
+
+            <p>
+              A clear description of the application's core
+              functionality, how it works, and how it utilizes
+              AnumatiDPI for managing consent.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="proposal-item">
+
+          <span class="proposal-number">
+            02
+          </span>
+
+          <div>
+
+            <h3>
+              The Need
+            </h3>
+
+            <p>
+              The specific problem your app solves and why a
+              DPI-scale consent framework is essential for this
+              use case.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="proposal-item">
+
+          <span class="proposal-number">
+            03
+          </span>
+
+          <div>
+
+            <h3>
+              Expected Beneficiaries
+            </h3>
+
+            <p>
+              Who will use this app? Outline the target audience
+              and how they will benefit from enhanced data
+              sovereignty.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="proposal-item">
+
+          <span class="proposal-number">
+            04
+          </span>
+
+          <div>
+
+            <h3>
+              Landscape Survey
+            </h3>
+
+            <p>
+              A brief survey of similar apps currently operating
+              in this application area, highlighting how your
+              proposed solution offers a structural or functional
+              advantage.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="proposal-item">
+
+          <span class="proposal-number">
+            05
+          </span>
+
+          <div>
+
+            <h3>
+              Team Profile
+            </h3>
+
+            <p>
+              A profile of the developer team and their background
+              experience.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <hr class="gold-rule">
+
+
+
+  <!-- =====================================================
+       WHY PARTICIPATE
+  ====================================================== -->
+
+  <section class="page-section">
+
+    <div class="section-head">
+
+      <h2>
+        Why Participate?
+      </h2>
+
+    </div>
+
+
+    <div class="prose">
+
+      <p>
+        Join us in building systems where data privacy means
+        dynamic, absolute control for the user.
+      </p>
+
+
+      <div class="highlight-box">
+
+        <p>
+          Selected teams from these proposal submissions will be
+          invited to attend the
+          <strong>“DPIs and its Social Impact”</strong>
+          workshop as part of the WebSciX 2026 conference.
+        </p>
+
+      </div>
+
+
+      <p>
+        The workshop will feature tutorials and community-building
+        sessions that developers can use to engage with other
+        participants.
+      </p>
+
+
+      <p>
+        Developers are eligible for a discounted registration fee
+        under the students and developers tier to participate in
+        the conference.
+      </p>
+
+
+      <p>
+        Developer teams that can showcase a prototype app within
+        three months of the workshop would be eligible to apply
+        for incubation at the IIITB Innovation Center to incubate
+        their startup, if they wish to do so.
+      </p>
+
+
+      <p>
+        The Innovation Center would have its own selection process
+        for choosing startups to incubate.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <hr class="gold-rule">
+
+
+
+  <!-- =====================================================
+       SUBMISSION
+  ====================================================== -->
+
+  <section class="page-section">
+
+    <div class="section-head">
+
+      <h2>
+        Submission Guidelines
+      </h2>
+
+    </div>
+
+
+    <div class="prose">
+
+      <p>
+        Your proposal should be uploaded using the designated
+        submission link.
+      </p>
+
+
+      <!--
+        IMPORTANT:
+        Replace "#" below with the actual proposal submission URL
+        once the submission form/link is finalized.
+      -->
+
+      <a
+        href="#"
+        class="primary-button"
+      >
+        Submit Your Proposal →
+      </a>
+
+
+      <p style="margin-top:25px;">
+
+        Learn more about AnumatiDPI:
+
+        <a
+          href="https://anumati.iiitb.ac.in/"
+          target="_blank"
+          rel="noopener"
+        >
+          anumati.iiitb.ac.in
+        </a>
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       BACK TO WORKSHOP
+  ====================================================== -->
+
+  <section class="page-section">
+
+    <div class="back-link">
+
+      <a href="workshop.html">
+        ← Back to Workshop Programme
+      </a>
+
+    </div>
+
+  </section>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     RIGHT SIDEBAR
+===================================================== -->
+
+<aside class="rightbar">
+
+  <div>
+
+    <h3>
+      App Developers
+    </h3>
+
+    <p>
+      Build privacy-first applications powered by
+      AnumatiDPI.
+    </p>
+
+  </div>
+
+
+  <div>
+
+    <h3>
+      Proposal
+    </h3>
+
+    <p>
+      2-page proposal
+    </p>
+
+    <ul>
+
+      <li>
+        Proposed App
+      </li>
+
+      <li>
+        Need
+      </li>
+
+      <li>
+        Beneficiaries
+      </li>
+
+      <li>
+        Landscape Survey
+      </li>
+
+      <li>
+        Team Profile
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div>
+
+    <h3>
+      Workshop
+    </h3>
+
+    <p>
+      DPIs and its Social Impact
+    </p>
+
+    <a href="workshop.html">
+      View Workshop →
+    </a>
+
+  </div>
+
+
+  <div>
+
+    <h3>
+      Related
+    </h3>
+
+    <a href="call-for-papers.html">
+      Call for Papers
+    </a>
+
+    <a href="Committee.html">
+      Programme Committee
+    </a>
+
+    <a href="../index.html">
+      WebSciX 2026 Home
+    </a>
+
+  </div>
+
+</aside>
+
+
+</div>
+
+</body>
+
+</html>
