@@ -1010,3 +1010,12 @@ body::before {
     transform:translateY(-2px);
     box-shadow:0 7px 16px rgba(15,42,68,0.28);
 }
+
+/* Tighter paragraph spacing for content-heavy pages */
+.prose p {
+  margin-bottom: 10px;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
