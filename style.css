@@ -1013,7 +1013,7 @@ body::before {
 
 /* Tighter paragraph spacing for content-heavy pages */
 .prose p {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .prose p:last-child {
