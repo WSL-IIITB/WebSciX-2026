@@ -1019,3 +1019,62 @@ body::before {
 .prose p:last-child {
   margin-bottom: 0;
 }
+/* =====================================================
+   REGISTRATION ANNOUNCEMENT TICKER
+===================================================== */
+
+.registration-ticker {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: #111b38;
+  padding: 11px 0;
+  white-space: nowrap;
+}
+
+.registration-ticker-track {
+  display: inline-flex;
+  width: max-content;
+  animation: registrationScroll 22s linear infinite;
+}
+
+.registration-ticker a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 80px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.registration-ticker a:hover {
+  color: #d9b86c;
+}
+
+.ticker-icon {
+  font-size: 8px;
+  color: #d9b86c;
+}
+
+.ticker-separator {
+  opacity: 0.55;
+}
+
+.ticker-arrow {
+  font-size: 16px;
+  color: #d9b86c;
+  margin-left: 2px;
+}
+
+@keyframes registrationScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
