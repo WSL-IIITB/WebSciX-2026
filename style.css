@@ -1026,27 +1026,31 @@ body::before {
 .registration-ticker {
   width: 100%;
   overflow: hidden;
+  background: #111b38;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: #111b38;
-  padding: 11px 0;
+  padding: 12px 0;
   white-space: nowrap;
 }
 
 .registration-ticker-track {
-  display: inline-flex;
+  display: flex;
   width: max-content;
-  animation: registrationScroll 22s linear infinite;
+  animation: registrationMarquee 18s linear infinite;
 }
 
 .registration-ticker a {
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding-right: 80px;
+  padding-right: 100px;
+
   color: #ffffff;
   text-decoration: none;
+
   font-size: 13px;
+  font-weight: 400;
   letter-spacing: 0.3px;
 }
 
@@ -1055,26 +1059,38 @@ body::before {
 }
 
 .ticker-icon {
-  font-size: 8px;
   color: #d9b86c;
+  font-size: 8px;
 }
 
 .ticker-separator {
-  opacity: 0.55;
+  opacity: 0.5;
 }
 
 .ticker-arrow {
-  font-size: 16px;
   color: #d9b86c;
+  font-size: 17px;
   margin-left: 2px;
 }
 
-@keyframes registrationScroll {
-  from {
+
+/* CONTINUOUS LEFTWARD SCROLL */
+
+@keyframes registrationMarquee {
+
+  0% {
     transform: translateX(0);
   }
 
-  to {
+  100% {
     transform: translateX(-50%);
   }
+
+}
+
+
+/* Pause when mouse is over it */
+
+.registration-ticker:hover .registration-ticker-track {
+  animation-play-state: paused;
 }
