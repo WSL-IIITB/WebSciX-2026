@@ -1,15 +1,769 @@
-<h1>Keynote Speakers</h1>
 
-<h2>Speaker 1</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speakers — WebSciX 2026</title>
+<link rel="stylesheet" href="../style.css">
 
-<p>
-Affiliation<br>
-Talk title: TBD
-</p>
+<style>
+/* Speaker cards — following the existing WebSciX theme */
 
-<h2>Speaker 2</h2>
+.speaker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 22px;
+}
 
-<p>
-Affiliation<br>
-Talk title: TBD
-</p>
+.speaker-card {
+  background: #fff;
+  border: 1px solid rgba(200,168,75,0.3);
+  border-top: 3px solid var(--gold);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.speaker-card-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-photo {
+  width: 145px;
+  height: 165px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  background: #f2f0ec;
+}
+
+.speaker-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 9px;
+}
+
+.speaker-card h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--navy, #17243b);
+  margin: 0 0 8px;
+}
+
+.speaker-designation {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.speaker-bio {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #444;
+}
+
+.speaker-bio p {
+  margin-bottom: 12px;
+}
+
+.speaker-divider {
+  height: 1px;
+  background: rgba(200,168,75,0.5);
+  margin: 35px 0;
+}
+
+.panel-description {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #444;
+}
+
+.panel-description p {
+  margin-bottom: 15px;
+}
+
+.panel-theme {
+  padding: 22px 25px;
+  background: rgba(200,168,75,0.08);
+  border-left: 3px solid var(--gold);
+  margin: 20px 0 28px;
+}
+
+.panel-theme h3 {
+  font-size: 19px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: var(--navy, #17243b);
+}
+
+.panel-role {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.speaker-links {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.speaker-links a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.speaker-links a:hover {
+  text-decoration: underline;
+}
+
+@media(max-width: 850px) {
+  .speaker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 600px) {
+  .speaker-card {
+    padding: 18px;
+  }
+
+  .speaker-photo {
+    width: 125px;
+    height: 145px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="page-shell">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <img src="../assets/webscix-logo.png"
+         alt="WebSciX"
+         style="height:36px;margin-bottom:8px;display:block;filter:brightness(1.1);">
+
+    <div class="conf-name">WebSciX 2026</div>
+    <div class="conf-year">Bengaluru · Nov 26–27</div>
+  </div>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="about.html">About &amp; History</a>
+    <a href="Committee.html">Committee</a>
+    <a href="speakers.html" class="active">Speakers</a>
+    <a href="workshop.html">Workshop</a>
+    <a href="call-for-papers.html">Call for Papers</a>
+    <a href="dpi-app-developers.html">Call for App Developers-DPI Workshop</a>
+    <a href="registration.html">Registration</a>
+    <a href="location.html">Venue &amp; Travel</a>
+    <a href="proceedings.html">Proceedings</a>
+    <a href="../assets/WebSciX-2026-Brochure.pdf"
+       download class="nav-download">Download Brochure ↓</a>
+  </nav>
+
+  <div class="sidebar-footer">
+    WebSciX 2026<br>
+    International Conference
+  </div>
+</aside>
+
+
+<!-- MAIN CONTENT -->
+<div class="content-wrap">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header" style="position:relative;">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> / Speakers
+    </div>
+
+    <h1>Invited Speakers &amp; Panelists</h1>
+
+    <p class="subtitle">
+      Distinguished researchers and thought leaders exploring
+      the intersections of Web Science, artificial intelligence,
+      networks and society
+    </p>
+  </div>
+
+
+  <!-- INTRODUCTION -->
+  <section class="page-section">
+    <div class="section-head">
+      <h2>Our Distinguished Speakers</h2>
+    </div>
+
+    <div class="prose">
+      <p>
+        WebSciX 2026 brings together distinguished academicians,
+        researchers and practitioners from diverse disciplines
+        to discuss emerging developments in Web Science,
+        artificial intelligence, digital infrastructures
+        and their societal implications.
+      </p>
+
+      <p>
+        The two-day conference features keynote addresses
+        by internationally recognised scholars, alongside
+        an interdisciplinary panel discussion on Responsible AI,
+        metrology and assurance, with a focus on the Global South.
+      </p>
+    </div>
+  </section>
+
+
+  <hr class="gold-rule" style="margin: 0 60px;">
+
+
+  <!-- DAY 1 KEYNOTE SPEAKERS -->
+  <section class="page-section">
+
+    <div class="section-head">
+      <div class="speaker-tag">November 26, 2026 · Day 1</div>
+      <h2>Keynote Speakers — Day 1</h2>
+      <p class="lead">
+        Opening day keynote addresses
+      </p>
+    </div>
+
+    <div class="speaker-grid">
+
+      <!-- DR HR NAGENDRA -->
+      <div class="speaker-card">
+        <div class="speaker-card-inner">
+
+          <img src="../assets/hr-nagendra.jpg"
+               alt="Dr. H. R. Nagendra"
+               class="speaker-photo">
+
+          <div class="speaker-tag">Keynote Speaker</div>
+
+          <h3>Padma Shri Dr. H. R. Nagendra</h3>
+
+          <div class="speaker-designation">
+            President, S-VYASA Society<br>
+            Vivekananda Yoga Anusandhana Samsthana
+          </div>
+
+          <div class="speaker-bio">
+            <p>
+              Dr. H. R. Nagendra is a distinguished academician
+              and researcher whose work has contributed
+              significantly to the development of Yoga research
+              and education.
+            </p>
+            <p>
+              He is the President of S-VYASA Society and has
+              played an important role in establishing Yoga
+              as an area of scientific research and
+              interdisciplinary academic inquiry.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- DR MANJUNATH SHARMA -->
+      <div class="speaker-card">
+        <div class="speaker-card-inner">
+
+          <img src="../assets/manjunath-sharma.jpg"
+               alt="Dr. N. K. Manjunath Sharma"
+               class="speaker-photo">
+
+          <div class="speaker-tag">Keynote Speaker</div>
+
+          <h3>Dr. N. K. Manjunath Sharma</h3>
+
+          <div class="speaker-designation">
+            Vice-Chancellor<br>
+            Vivekananda Yoga Anusandhana Samsthana
+          </div>
+
+          <div class="speaker-bio">
+            <p>
+              Dr. N. K. Manjunath Sharma is an academician
+              and researcher associated with S-VYASA,
+              with contributions to Yoga research,
+              education and academic administration.
+            </p>
+            <p>
+              His work encompasses the scientific study
+              of Yoga and its applications, bringing
+              together perspectives from traditional
+              knowledge systems and contemporary research.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="gold-rule" style="margin: 0 60px;">
+
+
+  <!-- DAY 2 KEYNOTE SPEAKERS -->
+  <section class="page-section">
+
+    <div class="section-head">
+      <div class="speaker-tag">November 27, 2026 · Day 2</div>
+      <h2>Keynote Speakers — Day 2</h2>
+      <p class="lead">
+        International perspectives on Web Science,
+        networks and the digital society
+      </p>
+    </div>
+
+    <div class="speaker-grid">
+
+      <!-- WENDY HALL -->
+      <div class="speaker-card">
+        <div class="speaker-card-inner">
+
+          <img src="../assets/wendy-hall.jpg"
+               alt="Dame Wendy Hall"
+               class="speaker-photo">
+
+          <div class="speaker-tag">Keynote Speaker</div>
+
+          <h3>Dame Wendy Hall, DBE, FRS, FREng</h3>
+
+          <div class="speaker-designation">
+            Regius Professor of Computer Science<br>
+            University of Southampton, United Kingdom
+          </div>
+
+          <div class="speaker-bio">
+            <p>
+              Dame Wendy Hall is a leading computer scientist
+              and internationally recognised pioneer in
+              Web Science. She is Regius Professor of
+              Computer Science at the University of Southampton
+              and Director of the Web Science Institute.
+            </p>
+
+            <p>
+              Her research has contributed to the development
+              of multimedia and hypermedia systems, digital
+              libraries and the interdisciplinary study
+              of the World Wide Web.
+            </p>
+
+            <p>
+              She has played a significant role in shaping
+              international research and technology policy,
+              particularly in the areas of Web Science
+              and artificial intelligence.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- NOSHIR CONTRACTOR -->
+      <div class="speaker-card">
+        <div class="speaker-card-inner">
+
+          <img src="../assets/noshir-contractor.jpg"
+               alt="Professor Noshir Contractor"
+               class="speaker-photo">
+
+          <div class="speaker-tag">Keynote Speaker</div>
+
+          <h3>Prof. Noshir Contractor</h3>
+
+          <div class="speaker-designation">
+            Jane S. &amp; William J. White Professor of Behavioral Sciences<br>
+            Northwestern University, USA
+          </div>
+
+          <div class="speaker-bio">
+            <p>
+              Professor Noshir Contractor is an internationally
+              recognised scholar in network science,
+              computational social science and Web Science.
+              He is the Jane S. &amp; William J. White Professor
+              of Behavioral Sciences at Northwestern University.
+            </p>
+
+            <p>
+              His research examines how social and knowledge
+              networks form, evolve and influence collaboration
+              across organisations, scientific communities
+              and digital environments.
+            </p>
+
+            <p>
+              His work brings together communication,
+              organisational science, computational methods
+              and network theory to understand the dynamics
+              of interconnected societies.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="gold-rule" style="margin: 0 60px;">
+
+
+  <!-- PANEL DISCUSSION -->
+  <section class="page-section">
+
+    <div class="section-head">
+      <div class="speaker-tag">November 27, 2026 · Day 2 · 3:45–4:30 PM</div>
+      <h2>Panel Discussion</h2>
+      <p class="lead">
+        An interdisciplinary discussion on responsible
+        artificial intelligence and its implications
+        for the Global South
+      </p>
+    </div>
+
+
+    <!-- PANEL THEME -->
+    <div class="panel-theme">
+
+      <div class="speaker-tag">Panel Theme</div>
+
+      <h3>
+        Responsible AI: Metrology and Assurance
+        (with a Focus on the Global South)
+      </h3>
+
+      <div class="panel-description">
+        <p>
+          As artificial intelligence (AI) starts to take
+          an ubiquitous role in our lives, its responsible
+          development and use has become a key topic of
+          deliberation and debate. While most appreciate
+          its central importance moving forwards and
+          relevant legislations start to emerge, there
+          is still a critical gap in benchmarking and
+          standardization of AI.
+        </p>
+
+        <p>
+          This panel delves into the notion that we need
+          a more rigorous approach in AI evaluation and
+          validation taking inspiration from measurement
+          science (metrology) and performance guarantees
+          (statistical assurance).
+        </p>
+
+        <p>
+          Additionally, as AI enters into its multimodal
+          era, in the long road towards general purpose AI,
+          the panel will discuss particular challenges
+          that may come up in the Global South, how it
+          relates to AI fairness and equity, and how one
+          might ensure the same despite the AI arms race.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="section-head">
+      <h2>Panel Participants</h2>
+      <p class="lead">
+        Invited experts bringing perspectives from
+        academia, industry and responsible AI research
+      </p>
+    </div>
+
+
+    <div class="speaker-grid">
+
+      <!-- WENDY HALL AS PANELIST -->
+      <div class="speaker-card">
+        <div class="speaker-card-inner">
+
+          <img src="../assets/wendy-hall.jpg"
+               alt="Dame Wendy Hall"
+               class="speaker-photo">
+
+          <div class="speaker-tag">Panelist</div>
+
+          <h3>Prof. Dame Wendy Hall, DBE, FRS, FREng</h3>
+
+          <div class="speaker-designation">
+            Regius Professor of Computer Science<br>
+            University of Southampton<br>
+            Director, Web Science Institute
+          </div>
+
+          <div class="speaker-bio">
+            <p>
+              Dame Wendy Hall is an internationally
+              recognised computer scientist and a leading
+              voice in Web Science, digital technologies
+              and artificial intelligence.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- TAPABRATA -->
+      <div class="speaker-card">
+        <div class="speaker-card-inner">
+
+          <img src="../assets/tapabrata-chakraborty.jpg"
+               alt="Dr. Tapabrata Rohan Chakraborty"
+               class="speaker-photo">
+
+          <div class="speaker-tag">Panelist</div>
+
+          <h3>Dr. Tapabrata Rohan Chakraborty</h3>
+
+          <div class="speaker-designation">
+            Lecturer (Assistant Professor)<br>
+            University College London<br>
+            Lead, Transparent and Reliable AI Lab (TRAIL)
+          </div>
+
+          <div class="speaker-bio">
+            <p>
+              Dr. Tapabrata Rohan Chakraborty is a
+              researcher at University College London
+              and leads the Transparent and Reliable AI
+              Lab (TRAIL), shared with the Alan Turing
+              Institute.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ARIJIT PATRA -->
+      <div class="speaker-card">
+        <div class="speaker-card-inner">
+
+          <img src="../assets/arijit-patra.jpg"
+               alt="Dr. Arijit Patra"
+               class="speaker-photo">
+
+          <div class="speaker-tag">Panelist</div>
+
+          <h3>Dr. Arijit Patra</h3>
+
+          <div class="speaker-designation">
+            Senior Principal Scientist<br>
+            UCB UK<br>
+            Honorary Senior Lecturer, University of Glasgow
+          </div>
+
+          <div class="speaker-bio">
+            <p>
+              Dr. Arijit Patra is a Senior Principal
+              Scientist at UCB UK and an Honorary Senior
+              Lecturer at the University of Glasgow.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- KIRANMAYEE -->
+      <div class="speaker-card">
+        <div class="speaker-card-inner">
+
+          <img src="../assets/kiranmayee-janardan.jpg"
+               alt="Dr. Kiranmayee Janardan"
+               class="speaker-photo">
+
+          <div class="speaker-tag">Panelist</div>
+
+          <h3>Dr. Kiranmayee Janardan</h3>
+
+          <div class="speaker-designation">
+            Lead Consultant in Responsible AI<br>
+            Infosys
+          </div>
+
+          <div class="speaker-bio">
+            <p>
+              Dr. Kiranmayee Janardan is the Lead
+              Consultant in Responsible AI at Infosys.
+              Her participation brings an industry
+              perspective to discussions on responsible
+              AI and its implementation.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- MODERATOR -->
+    <div class="speaker-divider"></div>
+
+    <div class="section-head">
+      <h2>Moderator</h2>
+    </div>
+
+    <div class="workshop-card" style="padding:22px 25px;">
+
+      <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
+
+        <img src="../assets/jayati-deshmukh.jpg"
+             alt="Dr. Jayati Deshmukh"
+             style="width:125px;height:145px;object-fit:cover;object-position:top;border-radius:4px;">
+
+        <div style="flex:1;min-width:180px;">
+
+          <div class="speaker-tag">Panel Moderator</div>
+
+          <h3 style="margin:5px 0 8px;">
+            Dr. Jayati Deshmukh
+          </h3>
+
+          <div class="speaker-designation">
+            BITS Pilani, Hyderabad Campus
+          </div>
+
+          <p style="font-size:14px;line-height:1.8;color:#555;">
+            Dr. Jayati Deshmukh will moderate the panel
+            discussion on Responsible AI: Metrology and
+            Assurance, bringing together perspectives
+            from academia and industry.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <hr class="gold-rule" style="margin: 0 60px;">
+
+
+  <!-- CLOSING -->
+  <section class="page-section">
+
+    <div class="section-head">
+      <h2>Join Us at WebSciX 2026</h2>
+    </div>
+
+    <div class="prose">
+      <p>
+        Join researchers, academicians, practitioners
+        and technology leaders for two days of
+        interdisciplinary exchange, keynote addresses,
+        workshops, research presentations and discussions
+        on the future of Web Science.
+      </p>
+    </div>
+
+    <div class="workshop-action" style="margin-top:20px;">
+      <a href="registration.html" class="primary-button">
+        Register for WebSciX 2026 →
+      </a>
+    </div>
+
+  </section>
+
+</div>
+
+
+<!-- RIGHT SIDEBAR -->
+<aside class="rightbar">
+
+  <div>
+    <h3>Conference Dates</h3>
+
+    <div class="dates-card">
+      <table class="dates-table">
+        <tr>
+          <td class="milestone">Day 1</td>
+          <td class="date-val">Nov 26</td>
+        </tr>
+        <tr>
+          <td class="milestone">Day 2</td>
+          <td class="date-val">Nov 27</td>
+        </tr>
+        <tr class="highlight-row">
+          <td class="milestone">Conference</td>
+          <td class="date-val">2026</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div>
+    <h3>Day 1</h3>
+    <p>
+      Dr. H. R. Nagendra<br>
+      Dr. N. K. Manjunath Sharma
+    </p>
+    <a href="workshop.html">Chittosha Workshop →</a>
+  </div>
+
+
+  <div>
+    <h3>Day 2</h3>
+    <p>
+      Dame Wendy Hall<br>
+      Prof. Noshir Contractor
+    </p>
+    <a href="workshop.html">DPI Workshop →</a>
+  </div>
+
+
+  <div>
+    <h3>Panel Discussion</h3>
+    <p>
+      Responsible AI: Metrology and Assurance<br>
+      November 27 · 3:45 PM
+    </p>
+  </div>
+
+
+  <div>
+    <h3>Related</h3>
+    <a href="registration.html">Conference Registration</a>
+    <a href="workshop.html">Workshops</a>
+    <a href="Committee.html">Organising Committee</a>
+    <a href="../assets/WebSciX-2026-Brochure.pdf" download>
+      Download Brochure ↓
+    </a>
+  </div>
+
+</aside>
+
+</div>
+</body>
+</html>
