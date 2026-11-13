@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,156 +6,437 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Committee — WebSciX 2026</title>
 <link rel="stylesheet" href="../style.css">
+
+<style>
+/* Committee page alignment fixes */
+
+.committee-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.committee-section h3 {
+  margin-top: 28px;
+  margin-bottom: 20px;
+}
+
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.member-card {
+  box-sizing: border-box;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.member-card img {
+  width: 140px;
+  height: 155px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  margin-bottom: 14px;
+  border-radius: 4px;
+}
+
+.member-card h4 {
+  margin: 5px 0 8px;
+}
+
+.member-card p {
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.member-card a {
+  text-decoration: none;
+}
+
+.member-card a:hover {
+  text-decoration: underline;
+}
+
+#steering,
+#organising,
+#pc {
+  scroll-margin-top: 30px;
+}
+
+.pc-note {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 24px 28px;
+  margin-top: 32px;
+  border-left: 4px solid var(--gold);
+}
+
+.pc-note h4 {
+  font-family: 'EB Garamond', serif;
+  font-size: 17px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .committee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-card img {
+    width: 125px;
+    height: 140px;
+  }
+}
+</style>
 </head>
+
 <body>
 <div class="page-shell">
 
+<!-- SIDEBAR -->
 <aside class="sidebar">
+
   <div class="sidebar-brand">
-    <img src="../assets/webscix-logo.png" alt="WebSciX" style="height:36px;margin-bottom:8px;display:block;filter:brightness(1.1);">
+    <img src="../assets/webscix-logo.png"
+         alt="WebSciX"
+         style="height:36px;margin-bottom:8px;display:block;filter:brightness(1.1);">
+
     <div class="conf-name">WebSciX 2026</div>
     <div class="conf-year">Bengaluru · Nov 26–27</div>
   </div>
+
   <nav>
     <a href="../index.html">Home</a>
     <a href="about.html">About &amp; History</a>
-    <a href="Committee.html" class="active">Committee</a
-     <a href="Speakers Profile.html">Speaker Talks<a>                                                   
+    <a href="Committee.html" class="active">Committee</a>
+    <a href="Speakers Profile.html">Speaker Talks</a>
+    <a href="program.html">Conference Program</a>
     <a href="workshop.html">Workshop</a>
     <a href="call-for-papers.html">Call for Papers</a>
-    <a href="dpi-app-developers.html">Call for App Developers-DPI Workshop</a> 
+    <a href="dpi-app-developers.html">Call for App Developers-DPI Workshop</a>
     <a href="registration.html">Registration</a>
-       <a href="program.html">Conference Program</a>
     <a href="location.html">Venue &amp; Travel</a>
     <a href="proceedings.html">Proceedings</a>
-    <a href="assets/WebSciX-2026-Brochure-updated.pdf" download class="nav-download">Download Brochure ↓</a>
+    <a href="../assets/WebSciX-2026-Brochure-updated.pdf"
+       download class="nav-download">Download Brochure ↓</a>
   </nav>
-  <div class="sidebar-footer">A satellite event of ACM Web Science Conference.<br>Hosted at IIIT Bangalore.</div>
+
+  <div class="sidebar-footer">
+    A satellite event of ACM Web Science Conference.<br>
+    Hosted at IIIT Bangalore.
+  </div>
+
 </aside>
 
+
+<!-- MAIN CONTENT -->
 <div class="content-wrap">
 
   <div class="page-header" style="position:relative;">
-    <div class="breadcrumb"><a href="../index.html">Home</a> / Committee</div>
+
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> / Committee
+    </div>
+
     <h1>Committee</h1>
-    <p class="subtitle">Steering, Organising, and Programme Committees</p>
-    
-      style="position:absolute; top:24px; right:24px; height:42px; opacity:0.6; filter:brightness(0) invert(1);">
+
+    <p class="subtitle">
+      Steering, Organising, and Programme Committees
+    </p>
+
   </div>
 
+
+  <!-- COMMITTEE MEMBERS -->
   <section class="page-section">
+
     <div class="committee-section">
 
-      <h3>Steering Committee</h3>
-      <div class="committee-grid">
 
-        <div class="member-card">
-          <img src="../assets/wendy.jpg" alt="Dame Wendy Hall">
-          <div class="role">Steering Committee</div>
-          <a href="https://www.southampton.ac.uk/people/5wyswr/dame-wendy-hall" target="_blank"><h4>Dame Wendy Hall</h4></a>
-          <p>DBE, FRS, FREng · Regius Professor of Computer Science<br>Director, Web Science Institute<br>University of Southampton</p>
+      <!-- STEERING COMMITTEE -->
+      <div id="steering">
+
+        <h3>Steering Committee</h3>
+
+        <div class="committee-grid">
+
+          <div class="member-card">
+            <img src="../assets/wendy.jpg" alt="Dame Wendy Hall">
+
+            <div class="role">Steering Committee</div>
+
+            <a href="https://www.southampton.ac.uk/people/5wyswr/dame-wendy-hall"
+               target="_blank" rel="noopener">
+              <h4>Dame Wendy Hall</h4>
+            </a>
+
+            <p>
+              DBE, FRS, FREng · Regius Professor of Computer Science<br>
+              Director, Web Science Institute<br>
+              University of Southampton
+            </p>
+          </div>
+
+
+          <div class="member-card">
+            <img src="../assets/noshir.jpg" alt="Noshir Contractor">
+
+            <div class="role">Steering Committee</div>
+
+            <a href="https://www.kellogg.northwestern.edu/academics-research/faculty/contractor_noshir/"
+               target="_blank" rel="noopener">
+              <h4>Noshir Contractor</h4>
+            </a>
+
+            <p>
+              Jane S. &amp; William J. White Professor of Behavioral Sciences<br>
+              McCormick School of Engineering<br>
+              Northwestern University
+            </p>
+          </div>
+
+
+          <div class="member-card">
+            <img src="../assets/rajagopalan.jpg" alt="S Rajagopalan">
+
+            <div class="role">Steering Committee</div>
+
+            <a href="https://www.iiitb.ac.in/iiitb-mosip/s-rajagopalan"
+               target="_blank" rel="noopener">
+              <h4>S. Rajagopalan</h4>
+            </a>
+
+            <p>
+              Professor &amp; Head, IIITB Innovation Centre<br>
+              MOSIP Initiative<br>
+              IIIT Bangalore
+            </p>
+          </div>
+
+
+          <div class="member-card">
+            <img src="../assets/shalini.jpg" alt="Shalini Urs">
+
+            <div class="role">Steering Committee</div>
+
+            <a href="http://www.isim.ac.in/prof-shalini-r-urs/"
+               target="_blank" rel="noopener">
+              <h4>Shalini Urs</h4>
+            </a>
+
+            <p>
+              Founder Chairperson &amp; Trustee<br>
+              MYRA School of Business<br>
+              Mysore
+            </p>
+          </div>
+
         </div>
+      </div>
 
-        <div class="member-card">
-          <img src="../assets/noshir.jpg" alt="Noshir Contractor">
-          <div class="role">Steering Committee</div>
-          <a href="https://www.kellogg.northwestern.edu/academics-research/faculty/contractor_noshir/" target="_blank"><h4>Noshir Contractor</h4></a>
-          <p>Jane S. &amp; William J. White Professor of Behavioral Sciences<br>McCormick School of Engineering<br>Northwestern University</p>
+
+      <hr class="gold-rule" style="margin:40px 0;">
+
+
+      <!-- ORGANISING COMMITTEE -->
+      <div id="organising">
+
+        <h3>Organising Committee</h3>
+
+        <div class="committee-grid">
+
+
+          <div class="member-card">
+            <img src="../assets/srinath.jpg" alt="Dr. Srinath Srinivasa">
+
+            <div class="role">General Chair</div>
+
+            <a href="https://www.iiitb.ac.in/faculty/srinath-srinivasa"
+               target="_blank" rel="noopener">
+              <h4>Dr. Srinath Srinivasa</h4>
+            </a>
+
+            <p>
+              Professor &amp; Dean (R&amp;D)<br>
+              Head, Web Science Lab<br>
+              IIIT Bangalore
+            </p>
+          </div>
+
+
+          <div class="member-card">
+            <img src="../assets/bidisha-chaudhuri.jpeg" alt="Bidisha Chaudhuri">
+
+            <div class="role">PC Co-Chair</div>
+
+            <a href="https://www.uva.nl/en/profile/c/h/b.chaudhuri/b.chaudhuri.html"
+               target="_blank" rel="noopener">
+              <h4>Dr. Bidisha Chaudhuri</h4>
+            </a>
+
+            <p>
+              Faculty of Humanities<br>
+              Department of Media Studies<br>
+              University of Amsterdam, Netherlands
+            </p>
+          </div>
+
+
+          <div class="member-card">
+            <img src="../assets/shaktibalan.jpg" alt="Dr. Sakthi Balan Muthiah">
+
+            <div class="role">PC Co-Chair</div>
+
+            <a href="https://www.snuchennai.edu.in/faculty/dr-sakthi-balan-muthiah/"
+               target="_blank" rel="noopener">
+              <h4>Dr. Sakthi Balan Muthiah</h4>
+            </a>
+
+            <p>
+              Professor, Department of Computer Science &amp; Engineering<br>
+              Shiv Nadar University, Chennai
+            </p>
+          </div>
+
+
+          <div class="member-card">
+            <img src="../assets/sushree.jpg" alt="Dr. Sushree S. Behera">
+
+            <div class="role">Organising Chair</div>
+
+            <a href="https://www.iiitb.ac.in/faculty/sushree-sangeeta-behera"
+               target="_blank" rel="noopener">
+              <h4>Dr. Sushree S. Behera</h4>
+            </a>
+
+            <p>
+              Professor<br>
+              IIIT Bangalore
+            </p>
+          </div>
+
+
+          <div class="member-card">
+            <img src="../assets/tulikasaha.jpg" alt="Dr. Tulika Saha">
+
+            <div class="role">Publicity Chair</div>
+
+            <a href="https://www.iiitb.ac.in/faculty/tulika-saha"
+               target="_blank" rel="noopener">
+              <h4>Dr. Tulika Saha</h4>
+            </a>
+
+            <p>
+              Professor<br>
+              University of Liverpool
+            </p>
+          </div>
+
+
+          <div class="member-card">
+            <img src="../assets/jayati.jpg" alt="Dr. Jayati Deshmukh">
+
+            <div class="role">Workshops &amp; Tutorials Chair</div>
+
+            <a href="https://www.bits-pilani.ac.in/hyderabad/jayatideshmukh/"
+               target="_blank" rel="noopener">
+              <h4>Dr. Jayati Deshmukh</h4>
+            </a>
+
+            <p>
+              Professor<br>
+              BITS Pilani, Hyderabad Campus
+            </p>
+          </div>
+
+
         </div>
+      </div>
 
-        <div class="member-card">
-          <img src="../assets/rajagopalan.jpg" alt="S Rajagopalan">
-          <div class="role">Steering Committee</div>
-          <a href="https://www.iiitb.ac.in/iiitb-mosip/s-rajagopalan" target="_blank"><h4>S. Rajagopalan</h4></a>
-          <p>Professor &amp; Head, IIITB Innovation Centre<br>MOSIP Initiative<br>IIIT Bangalore</p>
-        </div>
 
-        <div class="member-card">
-          <img src="../assets/shalini.jpg" alt="Shalini Urs">
-          <div class="role">Steering Committee</div>
-          <a href="http://www.isim.ac.in/prof-shalini-r-urs/" target="_blank"><h4>Shalini Urs</h4></a>
-          <p>Founder Chairperson &amp; Trustee<br>MYRA School of Business<br>Mysore</p>
+      <hr class="gold-rule" style="margin:40px 0;">
+
+
+      <!-- PROGRAMME COMMITTEE -->
+      <div id="pc">
+
+        <div class="pc-note">
+
+          <h4>Programme Committee</h4>
+
+          <p style="font-size:14px;color:#666;line-height:1.7;">
+            The Programme Committee comprises researchers and
+            academics responsible for the peer-review process,
+            research track evaluation and technical programme
+            development for WebSciX 2026.
+          </p>
+
+          <p style="font-size:13px;color:#888;margin-top:10px;">
+            Programme Committee member details will be updated here.
+          </p>
+
         </div>
 
       </div>
 
-      <h3>Organising Committee</h3>
-      <div class="committee-grid">
-
-        <div class="member-card">
-          <img src="../assets/srinath.jpg" alt="Dr. Srinath Srinivasa">
-          <div class="role">General Chair</div>
-          <a href="https://www.iiitb.ac.in/faculty/srinath-srinivasa" target="_blank"><h4>Dr. Srinath Srinivasa</h4></a>
-          <p>Professor &amp; Dean (R&amp;D)<br>Head, Web Science Lab<br>IIIT Bangalore</p>
-        </div>
-
-        <div class="member-card">
-          <img src="../assets/bidisha-chaudhuri.jpeg" alt="Bidisha Chaudhuri">
-          <div class="role">PC Co-Chair</div>
-          <a href="https://www.uva.nl/en/profile/c/h/b.chaudhuri/b.chaudhuri.html" target="_blank"><h4>Dr. Bidisha Chaudhuri </h4></a>
-          <p>Faculty of Humanities<br>Departement Mediastudies<br>University of Amsterdam, Netherlands.</p>
-        </div>
-
-        <div class="member-card">
-          <img src="../assets/shaktibalan.jpg" alt="Dr. Sakthi Balan Muthiah">
-          <div class="role">PC Co-Chair</div>
-          <a href="https://www.snuchennai.edu.in/faculty/dr-sakthi-balan-muthiah/" target="_blank"><h4>Dr. Sakthi Balan Muthiah</h4></a>
-          <p>Professor, Dept. of Computer Science &amp; Engineering<br>Shiv Nadar University, Chennai</p>
-        </div>
-
-        <div class="member-card">
-          <img src="../assets/sushree.jpg" alt="Dr. Sushree S. Behera">
-          <div class="role">Organising Chair</div>
-          <a href="https://www.iiitb.ac.in/faculty/sushree-sangeeta-behera" target="_blank"><h4>Dr. Sushree S. Behera</h4></a>
-          <p>Professor<br>IIIT Bangalore</p>
-        </div>
-
-        <div class="member-card">
-          <img src="../assets/tulikasaha.jpg" alt="Dr. Tulika Saha">
-          <div class="role">Publicity Chair</div>
-          <a href="https://www.iiitb.ac.in/faculty/tulika-saha" target="_blank"><h4>Dr. Tulika Saha</h4></a>
-          <p>Professor<br>University of Liverpool</p>
-        </div>
-
-        <div class="member-card">
-          <img src="../assets/jayati.jpg" alt="Dr. Jayati Deshmukh">
-          <div class="role">Workshops &amp; Tutorials Chair</div>
-          <a href="https://www.bits-pilani.ac.in/hyderabad/jayatideshmukh/" target="_blank"><h4>Dr. Jayati Deshmukh</h4></a>
-          <p>Professor<br>BITS Pilani, Hyderabad Campus</p>
-        </div>
-
-        
-      </div>
-
-      <!-- PC note -->
-      <div style="background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:6px;padding:24px 28px;margin-top:32px;border-left:4px solid var(--gold);">
-        <h4 style="font-family:'EB Garamond',serif;font-size:17px;color:var(--navy);margin-bottom:8px;">Programme Committee</h4>
-        <p style="font-size:14px;color:#666;line-height:1.7;"></p>
-      </div>
 
     </div>
   </section>
 
 </div>
 
+
+<!-- RIGHT SIDEBAR -->
 <aside class="rightbar">
+
   <div>
     <h3>Roles</h3>
+
     <a href="#steering">Steering Committee</a>
     <a href="#organising">Organising Committee</a>
     <a href="#pc">Programme Committee</a>
   </div>
+
+
   <div>
     <h3>Contact Chairs</h3>
-    <a href="mailto:websci2026@iiitb.ac.in">General enquiries</a>
-    <a href="mailto:websci2026@iiitb.ac.in">Paper submissions</a>
+
+    <a href="mailto:websci2026@iiitb.ac.in">
+      General enquiries
+    </a>
+
+    <a href="mailto:websci2026@iiitb.ac.in">
+      Paper submissions
+    </a>
   </div>
+
+
   <div>
     <h3>Resources</h3>
-    <a href="assets/WebSciX-2026-Brochure-updated.pdf" download>Download Brochure ↓</a>
+
+    <a href="../assets/WebSciX-2026-Brochure-updated.pdf" download>
+      Download Brochure ↓
+    </a>
   </div>
+
 </aside>
 
 </div>
 </body>
 </html>
+
