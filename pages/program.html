@@ -1,0 +1,942 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conference Programme — WebSciX 2026</title>
+<link rel="stylesheet" href="../style.css">
+
+<style>
+/* Conference Programme Styling */
+
+.program-day {
+  margin-bottom: 34px;
+}
+
+.program-day-header {
+  padding: 18px 22px;
+  background: #173d3b;
+  border-left: 4px solid var(--gold);
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.program-day-header .day-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+
+.program-day-header h2 {
+  color: #fff;
+  font-size: 23px;
+  margin: 0;
+}
+
+.program-day-header p {
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  margin: 6px 0 0;
+}
+
+.program-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 18px 0 25px;
+  border: 1px solid #e8e1d3;
+  border-radius: 5px;
+}
+
+.program-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 650px;
+}
+
+.program-table th {
+  background: #173d3b;
+  color: #fff;
+  padding: 13px 12px;
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.program-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #eee8dd;
+  vertical-align: top;
+  line-height: 1.65;
+  color: #444;
+}
+
+.program-table tr:last-child td {
+  border-bottom: none;
+}
+
+.program-table tr:nth-child(even) {
+  background: #faf8f3;
+}
+
+.program-table .time-cell {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #98752c;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.program-table .session-cell {
+  color: #173d3b;
+  font-weight: 600;
+}
+
+.program-table .venue-cell {
+  font-size: 12px;
+  color: #777;
+}
+
+.program-table .break-row {
+  background: #f3eee3;
+}
+
+.program-table .keynote-row {
+  background: #f5f0e5;
+}
+
+.program-table .workshop-row {
+  background: #edf4f0;
+}
+
+.program-table .panel-row {
+  background: #f1edf5;
+}
+
+.program-note {
+  padding: 15px 18px;
+  background: rgba(200,168,75,0.09);
+  border-left: 3px solid var(--gold);
+  color: #555;
+  font-size: 13px;
+  line-height: 1.75;
+  margin: 18px 0;
+}
+
+.program-subsection {
+  margin-top: 28px;
+  margin-bottom: 18px;
+}
+
+.program-subsection h3 {
+  font-size: 19px;
+  color: #173d3b;
+  margin-bottom: 7px;
+}
+
+.program-subsection .lead {
+  font-size: 13px;
+  color: #777;
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.track-card {
+  border: 1px solid #e8e1d3;
+  border-top: 3px solid var(--gold);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.track-card h4 {
+  background: #f5f1e8;
+  color: #173d3b;
+  padding: 13px 16px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.track-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.track-card td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.track-card tr:last-child td {
+  border-bottom: none;
+}
+
+.track-card td:first-child {
+  color: #98752c;
+  font-family: 'Space Mono', monospace;
+  width: 75px;
+}
+
+.placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.dpi-table td:first-child {
+  white-space: nowrap;
+}
+
+@media(max-width: 750px) {
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-day-header h2 {
+    font-size: 19px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="page-shell">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <img src="../assets/webscix-logo.png"
+         alt="WebSciX"
+         style="height:36px;margin-bottom:8px;display:block;filter:brightness(1.1);">
+
+    <div class="conf-name">WebSciX 2026</div>
+    <div class="conf-year">Bengaluru · Nov 26–27</div>
+  </div>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="about.html">About &amp; History</a>
+    <a href="Committee.html">Committee</a>
+    <a href="Speakers Profile.html">Speaker Talks</a>
+    <a href="program.html" class="active">Conference Program</a>
+    <a href="workshop.html">Workshop</a>
+    <a href="call-for-papers.html">Call for Papers</a>
+    <a href="dpi-app-developers.html">Call for App Developers-DPI Workshop</a>
+    <a href="registration.html">Registration</a>
+    <a href="location.html">Venue &amp; Travel</a>
+    <a href="proceedings.html">Proceedings</a>
+    <a href="../assets/WebSciX-2026-Brochure.pdf"
+       download class="nav-download">Download Brochure ↓</a>
+  </nav>
+
+  <div class="sidebar-footer">
+    Conference Programme:<br>
+    November 26–27, 2026
+  </div>
+</aside>
+
+
+<!-- MAIN CONTENT -->
+<div class="content-wrap">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header" style="position:relative;">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> / Conference Programme
+    </div>
+
+    <h1>Conference Programme</h1>
+
+    <p class="subtitle">
+      Two days of keynote addresses, workshops, research presentations
+      and interdisciplinary discussions at WebSciX 2026
+    </p>
+  </div>
+
+
+  <!-- OVERVIEW -->
+  <section class="page-section">
+    <div class="section-head">
+      <h2>Programme Overview</h2>
+    </div>
+
+    <div class="prose">
+      <p>
+        WebSciX 2026 will take place on November 26–27, 2026,
+        bringing together researchers, academicians and practitioners
+        to explore emerging developments in Web Science,
+        artificial intelligence, digital public infrastructures
+        and their impact on society.
+      </p>
+
+      <p>
+        The two-day programme features invited keynote addresses,
+        specialised workshops, research paper presentations,
+        interactive discussions and a panel on Responsible AI:
+        Metrology and Assurance, with a focus on the Global South.
+      </p>
+
+      <p>
+        The conference will be held at IIIT Bangalore,
+        with sessions distributed across the Amantran venue
+        and designated research presentation classrooms.
+      </p>
+    </div>
+  </section>
+
+
+  <hr class="gold-rule" style="margin: 0 60px;">
+
+
+  <!-- DAY 1 -->
+  <section class="page-section">
+
+    <div class="program-day">
+
+      <div class="program-day-header">
+        <div class="day-label">Thursday · November 26, 2026</div>
+        <h2>Day 1 — Opening, Workshops &amp; Research Presentations</h2>
+        <p>Inauguration, keynote addresses, Chittosha Workshop and research tracks</p>
+      </div>
+
+
+      <div class="section-head">
+        <h2>Day 1 Schedule</h2>
+        <p class="lead">November 26, 2026 · All timings are local time (IST)</p>
+      </div>
+
+
+      <div class="program-table-wrap">
+        <table class="program-table">
+          <thead>
+            <tr>
+              <th style="width:17%;">Time</th>
+              <th style="width:31%;">Session</th>
+              <th style="width:32%;">Details</th>
+              <th style="width:20%;">Venue</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="time-cell">9:00–9:30 AM</td>
+              <td class="session-cell">Registration</td>
+              <td>Participant registration and welcome.</td>
+              <td class="venue-cell">Amantran Ground Floor</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">9:30–9:40 AM</td>
+              <td class="session-cell">Welcome Note</td>
+              <td>General Chair and Programme Committee Chair(s).</td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">9:40–9:50 AM</td>
+              <td class="session-cell">Inaugural Address</td>
+              <td>Director, IIIT Bangalore.</td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr class="keynote-row">
+              <td class="time-cell">9:50–10:25 AM</td>
+              <td class="session-cell">Keynote Address 1 — Dr. H. R. Nagendra</td>
+              <td>Invited keynote address.</td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr class="keynote-row">
+              <td class="time-cell">10:25–11:00 AM</td>
+              <td class="session-cell">Keynote Address 2 — Dr. N. K. Manjunath Sharma</td>
+              <td>Invited keynote address.</td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr class="break-row">
+              <td class="time-cell">11:00–11:15 AM</td>
+              <td class="session-cell">Tea Break</td>
+              <td>Refreshments.</td>
+              <td class="venue-cell">Area in Front of Amantran</td>
+            </tr>
+
+            <tr class="workshop-row">
+              <td class="time-cell">11:15 AM–12:45 PM</td>
+              <td class="session-cell">Chittosha Workshop</td>
+              <td>
+                Introduction, talks by Prof. Anjan, Prof. Sridhar
+                and Prof. Srinath, followed by audience discussion.
+              </td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr class="break-row">
+              <td class="time-cell">12:45–1:30 PM</td>
+              <td class="session-cell">Lunch Break</td>
+              <td>Lunch and networking.</td>
+              <td class="venue-cell">Grand Stairs Area</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">1:30–3:30 PM</td>
+              <td class="session-cell">
+                Research Paper Presentations &amp;
+                Chittosha Long-Term Planning
+              </td>
+              <td>
+                Parallel research paper presentation tracks.
+                10 papers planned across the two tracks.
+                Chittosha long-term planning session.
+              </td>
+              <td class="venue-cell">
+                Research Papers: R101 and R105<br>
+                Chittosha: Amantran
+              </td>
+            </tr>
+
+            <tr class="break-row">
+              <td class="time-cell">3:30–3:45 PM</td>
+              <td class="session-cell">Tea / Transition Break</td>
+              <td>Refreshments and room transition.</td>
+              <td class="venue-cell">—</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">3:45–5:15 PM</td>
+              <td class="session-cell">Research Paper Presentations</td>
+              <td>
+                Continuation of parallel paper tracks
+                and research discussions.
+              </td>
+              <td class="venue-cell">R101 and R105</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">6:00–7:00 PM</td>
+              <td class="session-cell">Steering Committee Meeting</td>
+              <td>Steering Committee meeting.</td>
+              <td class="venue-cell">R308</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">7:00–8:30 PM</td>
+              <td class="session-cell">Steering Committee Dinner</td>
+              <td>Dinner discussion with Steering Committee members.</td>
+              <td class="venue-cell">Dinner Venue — To Be Confirmed</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <!-- DAY 1 TRACKS -->
+      <div class="program-subsection">
+        <h3>Research Paper Presentation Tracks</h3>
+        <p class="lead">
+          Day 1 · Suggested parallel track allocation
+        </p>
+      </div>
+
+      <div class="track-grid">
+
+        <div class="track-card">
+          <h4>Track A — Research Presentations</h4>
+          <table>
+            <tr><td>Paper 1</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 2</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 3</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 4</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 5</td><td class="placeholder">Paper title / Presenter</td></tr>
+          </table>
+        </div>
+
+        <div class="track-card">
+          <h4>Track B — Research Presentations</h4>
+          <table>
+            <tr><td>Paper 6</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 7</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 8</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 9</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 10</td><td class="placeholder">Paper title / Presenter</td></tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="program-note">
+        <strong>Note:</strong> The research paper presentation schedule
+        and individual presentation durations will be finalised
+        following confirmation of the accepted-paper list.
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="gold-rule" style="margin: 0 60px;">
+
+
+  <!-- DAY 2 -->
+  <section class="page-section">
+
+    <div class="program-day">
+
+      <div class="program-day-header">
+        <div class="day-label">Friday · November 27, 2026</div>
+        <h2>Day 2 — Keynotes, DPI Workshop, Research &amp; Panel</h2>
+        <p>International keynote addresses, DPI discussions and Responsible AI panel</p>
+      </div>
+
+
+      <div class="section-head">
+        <h2>Day 2 Schedule</h2>
+        <p class="lead">November 27, 2026 · All timings are local time (IST)</p>
+      </div>
+
+
+      <div class="program-table-wrap">
+        <table class="program-table">
+
+          <thead>
+            <tr>
+              <th style="width:17%;">Time</th>
+              <th style="width:31%;">Session</th>
+              <th style="width:32%;">Details</th>
+              <th style="width:20%;">Venue</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr class="keynote-row">
+              <td class="time-cell">9:30–10:15 AM</td>
+              <td class="session-cell">Keynote — Dame Wendy Hall</td>
+              <td>Invited keynote address.</td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr class="keynote-row">
+              <td class="time-cell">10:15–11:00 AM</td>
+              <td class="session-cell">Keynote — Prof. Noshir Contractor</td>
+              <td>Invited keynote address.</td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr class="break-row">
+              <td class="time-cell">11:00–11:15 AM</td>
+              <td class="session-cell">Tea Break</td>
+              <td>Refreshments.</td>
+              <td class="venue-cell">Area in Front of Amantran</td>
+            </tr>
+
+            <tr class="workshop-row">
+              <td class="time-cell">11:15 AM–12:45 PM</td>
+              <td class="session-cell">DPI Workshop — DPIs and Their Social Impact</td>
+              <td>
+                WSL DPI thinking, Anumati presentation,
+                SRIP registration demonstration and
+                DPI application presentations.
+              </td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr class="break-row">
+              <td class="time-cell">12:45–1:30 PM</td>
+              <td class="session-cell">Lunch Break</td>
+              <td>Lunch and networking.</td>
+              <td class="venue-cell">Grand Stairs Area</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">1:30–3:30 PM</td>
+              <td class="session-cell">Research Paper Presentations</td>
+              <td>
+                Parallel research paper presentation tracks.
+                10 papers planned across two tracks.
+                Anumati and registered applications interactive
+                discussion (optional, 60 minutes).
+              </td>
+              <td class="venue-cell">
+                Research Papers: R105 and R203<br>
+                Anumati / Registered Apps: Amantran
+              </td>
+            </tr>
+
+            <tr class="break-row">
+              <td class="time-cell">3:30–3:45 PM</td>
+              <td class="session-cell">Break</td>
+              <td>Refreshments and transition.</td>
+              <td class="venue-cell">—</td>
+            </tr>
+
+            <tr class="panel-row">
+              <td class="time-cell">4:00–4:45 PM</td>
+              <td class="session-cell">Panel Discussion</td>
+              <td>
+                Responsible AI: Metrology and Assurance
+                (with a Focus on the Global South).
+              </td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+            <tr class="break-row">
+              <td class="time-cell">4:45–5:00 PM</td>
+              <td class="session-cell">High Tea</td>
+              <td>Networking and refreshments.</td>
+              <td class="venue-cell">—</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">5:00–5:15 PM</td>
+              <td class="session-cell">Valedictory and Vote of Thanks</td>
+              <td>Closing remarks.</td>
+              <td class="venue-cell">Amantran</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <!-- DPI WORKSHOP DETAILS -->
+      <div class="program-subsection">
+        <h3>DPI Workshop — Detailed Session Schedule</h3>
+        <p class="lead">
+          DPIs and Their Social Impact · November 27, 2026
+        </p>
+      </div>
+
+      <div class="program-table-wrap">
+        <table class="program-table dpi-table">
+
+          <thead>
+            <tr>
+              <th style="width:25%;">Duration</th>
+              <th style="width:75%;">Activity</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="time-cell">11:15–11:40 AM</td>
+              <td class="session-cell">WSL DPI Thinking</td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">11:30–11:55 AM</td>
+              <td class="session-cell">
+                Anumati Pitch and SRIP Registration Demo
+              </td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">11:55 AM–12:05 PM</td>
+              <td>
+                Debamalya Ray — <strong>ConsentAttend</strong>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">12:05–12:15 PM</td>
+              <td>
+                Uday Jhariya — <strong>ConsentMesh</strong>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">12:15–12:25 PM</td>
+              <td>
+                Varshini S. N. — <strong>ASSETFLOW</strong>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">12:25–12:35 PM</td>
+              <td>
+                Mrigank Jaiswal — <strong>InvigiLink AI</strong>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="time-cell">12:35–12:45 PM</td>
+              <td>
+                Saijagdesh — <strong>PGFy</strong>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="program-note">
+        <strong>Workshop schedule:</strong>
+        <a href="https://docs.google.com/document/d/1gO49jsZX38g_efxg_WwHtCChng0py-Db/edit#heading=h.gcp5911486pl"
+           target="_blank" rel="noopener">
+          View detailed DPI workshop schedule →
+        </a>
+      </div>
+
+
+      <!-- DAY 2 RESEARCH TRACKS -->
+      <div class="program-subsection">
+        <h3>Research Paper Presentation Tracks</h3>
+        <p class="lead">
+          Day 2 · Suggested parallel track allocation
+        </p>
+      </div>
+
+      <div class="track-grid">
+
+        <div class="track-card">
+          <h4>Track A — Research Presentations</h4>
+          <table>
+            <tr><td>Paper 11</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 12</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 13</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 14</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 15</td><td class="placeholder">Paper title / Presenter</td></tr>
+          </table>
+        </div>
+
+        <div class="track-card">
+          <h4>Track B — Research Presentations</h4>
+          <table>
+            <tr><td>Paper 16</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 17</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 18</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 19</td><td class="placeholder">Paper title / Presenter</td></tr>
+            <tr><td>Paper 20</td><td class="placeholder">Paper title / Presenter</td></tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="program-note">
+        <strong>Note:</strong> A total of 20 research papers are planned
+        across the two conference days, with 10 papers per day.
+        Each day has two parallel tracks with five papers assigned
+        to each track. Paper order and individual presentation
+        durations will be finalised after confirmation of the
+        accepted-paper list.
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="gold-rule" style="margin: 0 60px;">
+
+
+  <!-- PANEL DISCUSSION -->
+  <section class="page-section">
+
+    <div class="section-head">
+      <div class="speaker-tag">November 27, 2026 · 4:00–4:45 PM</div>
+      <h2>Panel Discussion</h2>
+      <p class="lead">
+        Responsible AI: Metrology and Assurance
+        (with a Focus on the Global South)
+      </p>
+    </div>
+
+    <div class="prose">
+      <p>
+        As artificial intelligence (AI) starts to take an ubiquitous
+        role in our lives, its responsible development and use has
+        become a key topic of deliberation and debate. While most
+        appreciate its central importance moving forwards and
+        relevant legislations start to emerge, there is still a
+        critical gap in benchmarking and standardization of AI.
+      </p>
+
+      <p>
+        This panel delves into the notion that we need a more
+        rigorous approach in AI evaluation and validation taking
+        inspiration from measurement science (metrology) and
+        performance guarantees (statistical assurance).
+      </p>
+
+      <p>
+        Additionally, as AI enters into its multimodal era, in the
+        long road towards general purpose AI, the panel will discuss
+        particular challenges that may come up in the Global South,
+        how it relates to AI fairness and equity, and how one might
+        ensure the same despite the AI arms race.
+      </p>
+    </div>
+
+    <div class="workshop-card" style="margin-top:20px;">
+      <h3 style="margin-bottom:12px;">Panel Participants</h3>
+
+      <p style="font-size:14px;line-height:1.8;color:#555;">
+        <strong>Prof. Dame Wendy Hall, DBE, FRS, FREng</strong><br>
+        Regius Professor of Computer Science, University of Southampton;
+        Director of the Web Science Institute.
+      </p>
+
+      <p style="font-size:14px;line-height:1.8;color:#555;">
+        <strong>Dr. Tapabrata Rohan Chakraborty</strong><br>
+        Lecturer (Assistant Professor), University College London;
+        Lead, Transparent and Reliable AI Lab (TRAIL),
+        shared with the Alan Turing Institute.
+      </p>
+
+      <p style="font-size:14px;line-height:1.8;color:#555;">
+        <strong>Dr. Arijit Patra</strong><br>
+        Senior Principal Scientist, UCB UK;
+        Honorary Senior Lecturer, University of Glasgow.
+      </p>
+
+      <p style="font-size:14px;line-height:1.8;color:#555;">
+        <strong>Dr. Kiranmayee Janardan</strong><br>
+        Lead Consultant in Responsible AI, Infosys.
+      </p>
+
+      <hr class="gold-rule">
+
+      <p style="font-size:14px;line-height:1.8;color:#555;margin-bottom:0;">
+        <strong>Moderator:</strong> Dr. Jayati Deshmukh
+      </p>
+    </div>
+
+  </section>
+
+
+  <hr class="gold-rule" style="margin: 0 60px;">
+
+
+  <!-- GENERAL INFORMATION -->
+  <section class="page-section">
+
+    <div class="section-head">
+      <h2>General Programme Information</h2>
+    </div>
+
+    <div class="prose">
+      <p>
+        The conference programme includes parallel research
+        presentation tracks, workshops and interactive discussions.
+        Participants are encouraged to consult the individual
+        session details for the relevant venue.
+      </p>
+
+      <p>
+        The Amantran venue may also be used for DPI workshop
+        or Chittosha workshop activities during the research
+        presentation window, if required.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- REGISTRATION -->
+  <section class="page-section">
+    <div class="section-head">
+      <h2>Join Us at WebSciX 2026</h2>
+    </div>
+
+    <div class="prose">
+      <p>
+        Be part of two days of research, collaboration and
+        interdisciplinary exchange at WebSciX 2026.
+        We look forward to welcoming you to IIIT Bangalore.
+      </p>
+    </div>
+
+    <div class="workshop-action" style="margin-top:20px;">
+      <a href="registration.html" class="primary-button">
+        Conference Registration →
+      </a>
+    </div>
+  </section>
+
+</div>
+
+
+<!-- RIGHT SIDEBAR -->
+<aside class="rightbar">
+
+  <div>
+    <h3>Conference Dates</h3>
+
+    <div class="dates-card">
+      <table class="dates-table">
+        <tr>
+          <td class="milestone">Day 1</td>
+          <td class="date-val">Nov 26</td>
+        </tr>
+        <tr>
+          <td class="milestone">Day 2</td>
+          <td class="date-val">Nov 27</td>
+        </tr>
+        <tr class="highlight-row">
+          <td class="milestone">Conference</td>
+          <td class="date-val">2026</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div>
+    <h3>Day 1 Highlights</h3>
+    <p>
+      Inauguration<br>
+      Two Keynote Addresses<br>
+      Chittosha Workshop<br>
+      Research Presentations
+    </p>
+  </div>
+
+
+  <div>
+    <h3>Day 2 Highlights</h3>
+    <p>
+      Two Keynote Addresses<br>
+      DPI Workshop<br>
+      Research Presentations<br>
+      Panel Discussion
+    </p>
+  </div>
+
+
+  <div>
+    <h3>Panel Discussion</h3>
+    <p>
+      Responsible AI: Metrology and Assurance<br>
+      November 27 · 4:00 PM
+    </p>
+  </div>
+
+
+  <div>
+    <h3>Related</h3>
+    <a href="Speakers Profile.html">Speaker Talks</a>
+    <a href="workshop.html">Workshops</a>
+    <a href="registration.html">Registration</a>
+    <a href="Committee.html">Programme Committee</a>
+    <a href="../assets/WebSciX-2026-Brochure.pdf" download>
+      Download Brochure ↓
+    </a>
+  </div>
+
+</aside>
+
+</div>
+</body>
+</html>
