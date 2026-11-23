@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,6 +101,86 @@
     height: 140px;
   }
 }
+
+/* Subtle conference SPOC contact line */
+.spoc-contact {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 35px;
+  padding: 16px 0;
+  border-top: 1px solid #e8e1d3;
+  border-bottom: 1px solid #e8e1d3;
+}
+
+.spoc-contact img {
+  display: block !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  flex: 0 0 44px !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.spoc-contact-text {
+  min-width: 0;
+}
+
+.spoc-contact-text span {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #98752c;
+  margin-bottom: 3px;
+}
+
+.spoc-contact-text strong {
+  display: block;
+  font-size: 13px;
+  color: #173d3b;
+  margin-bottom: 3px;
+}
+
+.spoc-contact-text p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #777;
+}
+
+.spoc-contact-text a {
+  color: #173d3b;
+  text-decoration: none;
+  margin-left: 3px;
+  overflow-wrap: anywhere;
+}
+
+.spoc-contact-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .spoc-contact img {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+    flex-basis: 40px !important;
+  }
+}
 </style>
 </head>
 
@@ -143,7 +222,6 @@
 
 </aside>
 
-
 <!-- MAIN CONTENT -->
 <div class="content-wrap">
 
@@ -161,12 +239,10 @@
 
   </div>
 
-
   <!-- COMMITTEE MEMBERS -->
   <section class="page-section">
 
     <div class="committee-section">
-
 
       <!-- STEERING COMMITTEE -->
       <div id="steering">
@@ -192,7 +268,6 @@
             </p>
           </div>
 
-
           <div class="member-card">
             <img src="../assets/noshir.jpg" alt="Noshir Contractor">
 
@@ -210,7 +285,6 @@
             </p>
           </div>
 
-
           <div class="member-card">
             <img src="../assets/rajagopalan.jpg" alt="S Rajagopalan">
 
@@ -227,7 +301,6 @@
               IIIT Bangalore
             </p>
           </div>
-
 
           <div class="member-card">
             <img src="../assets/shalini.jpg" alt="Shalini Urs">
@@ -249,9 +322,7 @@
         </div>
       </div>
 
-
       <hr class="gold-rule" style="margin:40px 0;">
-
 
       <!-- ORGANISING COMMITTEE -->
       <div id="organising">
@@ -259,7 +330,6 @@
         <h3>Organising Committee</h3>
 
         <div class="committee-grid">
-
 
           <div class="member-card">
             <img src="../assets/srinath.jpg" alt="Dr. Srinath Srinivasa">
@@ -278,7 +348,6 @@
             </p>
           </div>
 
-
           <div class="member-card">
             <img src="../assets/bidisha-chaudhuri.jpeg" alt="Bidisha Chaudhuri">
 
@@ -296,7 +365,6 @@
             </p>
           </div>
 
-
           <div class="member-card">
             <img src="../assets/shaktibalan.jpg" alt="Dr. Sakthi Balan Muthiah">
 
@@ -312,7 +380,6 @@
               Shiv Nadar University, Chennai
             </p>
           </div>
-
 
           <div class="member-card">
             <img src="../assets/sushree.jpg" alt="Dr. Sushree S. Behera">
@@ -330,7 +397,6 @@
             </p>
           </div>
 
-
           <div class="member-card">
             <img src="../assets/tulikasaha.jpg" alt="Dr. Tulika Saha">
 
@@ -346,7 +412,6 @@
               University of Liverpool
             </p>
           </div>
-
 
           <div class="member-card">
             <img src="../assets/jayati.jpg" alt="Dr. Jayati Deshmukh">
@@ -364,13 +429,10 @@
             </p>
           </div>
 
-
         </div>
       </div>
 
-
       <hr class="gold-rule" style="margin:40px 0;">
-
 
       <!-- PROGRAMME COMMITTEE -->
       <div id="pc">
@@ -394,28 +456,24 @@
 
       </div>
 
-
     </div>
   </section>
 
-</div>
+  <!-- CONFERENCE SPOC CONTACT -->
+  <div class="spoc-contact">
+    <img src="../assets/chethana.jpg" alt="Chethana Prasad Kabgere">
 
-  <!-- SPOC CONTACT -->
-<div class="spoc-contact">
-  <img src="../assets/chethana.jpg"
-       alt="Chethana Prasad Kabgere">
-
-  <div class="spoc-contact-text">
-    <span>Conference SPOC</span>
-    <strong>Chethana Prasad Kabgere</strong>
-    <p>
-      For any queries or further information regarding WebSciX 2026,
-      please feel free to get in touch.
-      <a href="mailto:chethana.prasadk@gmail.com">
-        chethana.prasadk@gmail.com
-      </a>
-    </p>
+    <div class="spoc-contact-text">
+      <span>Conference SPOC</span>
+      <strong>Chethana Prasad Kabgere</strong>
+      <p>
+        For any queries or further information regarding WebSciX 2026,
+        please feel free to get in touch.
+        <a href="mailto:chethana.prasadk@gmail.com">chethana.prasadk@gmail.com</a>
+      </p>
+    </div>
   </div>
+
 </div>
 
 <!-- RIGHT SIDEBAR -->
@@ -429,7 +487,6 @@
     <a href="#pc">Programme Committee</a>
   </div>
 
-
   <div>
     <h3>Contact Chairs</h3>
 
@@ -441,7 +498,6 @@
       Paper submissions
     </a>
   </div>
-
 
   <div>
     <h3>Resources</h3>
@@ -456,4 +512,3 @@
 </div>
 </body>
 </html>
-
