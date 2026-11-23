@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
 <link rel="stylesheet" href="../style.css">
 
 <style>
-/* Committee page alignment fixes */
+/* Committee page layout */
 
 .committee-section {
   width: 100%;
@@ -27,13 +28,16 @@
   align-items: stretch;
 }
 
+/* Faculty cards */
+
 .member-card {
   box-sizing: border-box;
   min-width: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 .member-card img {
@@ -42,7 +46,7 @@
   object-fit: cover;
   object-position: top center;
   display: block;
-  margin-bottom: 14px;
+  margin: 0 auto 14px !important;
   border-radius: 4px;
 }
 
@@ -63,11 +67,15 @@
   text-decoration: underline;
 }
 
+/* Section navigation */
+
 #steering,
 #organising,
 #pc {
   scroll-margin-top: 30px;
 }
+
+/* Programme Committee */
 
 .pc-note {
   background: #fff;
@@ -85,6 +93,73 @@
   margin-bottom: 8px;
 }
 
+/* Conference SPOC */
+
+.spoc-contact {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 42px auto 0;
+  padding: 30px 24px;
+  border-top: 1px solid #e8e1d3;
+  border-bottom: 1px solid #e8e1d3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.spoc-contact img {
+  display: block !important;
+  width: 88px !important;
+  height: 88px !important;
+  min-width: 88px !important;
+  max-width: 88px !important;
+  min-height: 88px !important;
+  max-height: 88px !important;
+  flex: 0 0 88px !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  border-radius: 50% !important;
+  margin: 0 auto !important;
+}
+
+.spoc-contact-text {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.spoc-contact-text .role {
+  margin-bottom: 5px;
+}
+
+.spoc-contact-text h4 {
+  margin: 4px 0 7px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.spoc-contact-text p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #777;
+}
+
+.spoc-contact-text a {
+  color: #173d3b;
+  text-decoration: none;
+}
+
+.spoc-contact-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+
 @media (max-width: 900px) {
   .committee-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -100,85 +175,19 @@
     width: 125px;
     height: 140px;
   }
-}
 
-/* Subtle conference SPOC contact line */
-.spoc-contact {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 35px;
-  padding: 16px 0;
-  border-top: 1px solid #e8e1d3;
-  border-bottom: 1px solid #e8e1d3;
-}
+  .spoc-contact {
+    padding: 24px 16px;
+  }
 
-.spoc-contact img {
-  display: block !important;
-  width: 44px !important;
-  height: 44px !important;
-  min-width: 44px !important;
-  max-width: 44px !important;
-  min-height: 44px !important;
-  max-height: 44px !important;
-  flex: 0 0 44px !important;
-  object-fit: cover !important;
-  object-position: top center !important;
-  border-radius: 50% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.spoc-contact-text {
-  min-width: 0;
-}
-
-.spoc-contact-text span {
-  display: block;
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #98752c;
-  margin-bottom: 3px;
-}
-
-.spoc-contact-text strong {
-  display: block;
-  font-size: 13px;
-  color: #173d3b;
-  margin-bottom: 3px;
-}
-
-.spoc-contact-text p {
-  margin: 0;
-  font-size: 11px;
-  line-height: 1.6;
-  color: #777;
-}
-
-.spoc-contact-text a {
-  color: #173d3b;
-  text-decoration: none;
-  margin-left: 3px;
-  overflow-wrap: anywhere;
-}
-
-.spoc-contact-text a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 600px) {
   .spoc-contact img {
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
-    max-width: 40px !important;
-    min-height: 40px !important;
-    max-height: 40px !important;
-    flex-basis: 40px !important;
+    width: 76px !important;
+    height: 76px !important;
+    min-width: 76px !important;
+    max-width: 76px !important;
+    min-height: 76px !important;
+    max-height: 76px !important;
+    flex-basis: 76px !important;
   }
 }
 </style>
@@ -222,6 +231,7 @@
 
 </aside>
 
+
 <!-- MAIN CONTENT -->
 <div class="content-wrap">
 
@@ -239,10 +249,12 @@
 
   </div>
 
+
   <!-- COMMITTEE MEMBERS -->
   <section class="page-section">
 
     <div class="committee-section">
+
 
       <!-- STEERING COMMITTEE -->
       <div id="steering">
@@ -268,6 +280,7 @@
             </p>
           </div>
 
+
           <div class="member-card">
             <img src="../assets/noshir.jpg" alt="Noshir Contractor">
 
@@ -285,6 +298,7 @@
             </p>
           </div>
 
+
           <div class="member-card">
             <img src="../assets/rajagopalan.jpg" alt="S Rajagopalan">
 
@@ -301,6 +315,7 @@
               IIIT Bangalore
             </p>
           </div>
+
 
           <div class="member-card">
             <img src="../assets/shalini.jpg" alt="Shalini Urs">
@@ -322,7 +337,9 @@
         </div>
       </div>
 
+
       <hr class="gold-rule" style="margin:40px 0;">
+
 
       <!-- ORGANISING COMMITTEE -->
       <div id="organising">
@@ -330,6 +347,7 @@
         <h3>Organising Committee</h3>
 
         <div class="committee-grid">
+
 
           <div class="member-card">
             <img src="../assets/srinath.jpg" alt="Dr. Srinath Srinivasa">
@@ -348,6 +366,7 @@
             </p>
           </div>
 
+
           <div class="member-card">
             <img src="../assets/bidisha-chaudhuri.jpeg" alt="Bidisha Chaudhuri">
 
@@ -365,6 +384,7 @@
             </p>
           </div>
 
+
           <div class="member-card">
             <img src="../assets/shaktibalan.jpg" alt="Dr. Sakthi Balan Muthiah">
 
@@ -380,6 +400,7 @@
               Shiv Nadar University, Chennai
             </p>
           </div>
+
 
           <div class="member-card">
             <img src="../assets/sushree.jpg" alt="Dr. Sushree S. Behera">
@@ -397,6 +418,7 @@
             </p>
           </div>
 
+
           <div class="member-card">
             <img src="../assets/tulikasaha.jpg" alt="Dr. Tulika Saha">
 
@@ -412,6 +434,7 @@
               University of Liverpool
             </p>
           </div>
+
 
           <div class="member-card">
             <img src="../assets/jayati.jpg" alt="Dr. Jayati Deshmukh">
@@ -429,10 +452,13 @@
             </p>
           </div>
 
+
         </div>
       </div>
 
+
       <hr class="gold-rule" style="margin:40px 0;">
+
 
       <!-- PROGRAMME COMMITTEE -->
       <div id="pc">
@@ -456,28 +482,37 @@
 
       </div>
 
+
     </div>
   </section>
 
+
   <!-- CONFERENCE SPOC -->
-<div class="spoc-contact">
-  <img src="../assets/chethana.jpg"
-       alt="Chethana Prasad Kabgere">
+  <section class="spoc-contact">
 
-  <div class="spoc-contact-text">
-    <div class="role">Conference SPOC</div>
-    <h4>Chethana Prasad Kabgere</h4>
-    <p>
-      For any queries or further information regarding WebSciX 2026,
-      please feel free to get in touch at
-      <a href="mailto:chethana.prasadk@iiitb.ac.in">
-        chethana.prasadk@iiitb.ac.in
-      </a>.
-    </p>
-  </div>
+    <img src="../assets/chethana.jpg"
+         alt="Chethana Prasad Kabgere">
+
+    <div class="spoc-contact-text">
+
+      <div class="role">Conference SPOC</div>
+
+      <h4>Chethana Prasad Kabgere</h4>
+
+      <p>
+        For any queries or further information regarding WebSciX 2026,
+        please feel free to get in touch at
+        <a href="mailto:chethana.prasadk@gmail.com">
+          chethana.prasadk@gmail.com
+        </a>.
+      </p>
+
+    </div>
+
+  </section>
+
 </div>
 
-</div>
 
 <!-- RIGHT SIDEBAR -->
 <aside class="rightbar">
@@ -490,6 +525,7 @@
     <a href="#pc">Programme Committee</a>
   </div>
 
+
   <div>
     <h3>Contact Chairs</h3>
 
@@ -501,6 +537,7 @@
       Paper submissions
     </a>
   </div>
+
 
   <div>
     <h3>Resources</h3>
@@ -515,3 +552,4 @@
 </div>
 </body>
 </html>
+
