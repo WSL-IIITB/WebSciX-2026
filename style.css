@@ -1115,51 +1115,51 @@ body::before {
 .spoc-contact {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
   margin-top: 35px;
-  padding: 18px 0;
+  padding: 22px 0;
   border-top: 1px solid #e8e1d3;
   border-bottom: 1px solid #e8e1d3;
 }
 
 .spoc-contact img {
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 50%;
-  margin: 0;
+  display: block !important;
+  width: 72px !important;
+  height: 72px !important;
+  min-width: 72px !important;
+  max-width: 72px !important;
+  min-height: 72px !important;
+  max-height: 72px !important;
+  flex: 0 0 72px !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
 }
 
-.spoc-contact-text span {
-  display: block;
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #98752c;
-  margin-bottom: 3px;
+.spoc-contact-text {
+  flex: 1;
+  min-width: 0;
 }
 
-.spoc-contact-text strong {
-  display: block;
-  font-size: 13px;
+.spoc-contact-text h4 {
+  margin: 4px 0 5px;
   color: #173d3b;
-  margin-bottom: 3px;
+  font-size: 16px;
 }
 
 .spoc-contact-text p {
   margin: 0;
-  font-size: 11px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.7;
   color: #777;
 }
 
 .spoc-contact-text a {
   color: #173d3b;
   text-decoration: none;
-  margin-left: 3px;
 }
 
 .spoc-contact-text a:hover {
@@ -1168,12 +1168,16 @@ body::before {
 
 @media (max-width: 600px) {
   .spoc-contact {
-    align-items: flex-start;
+    gap: 14px;
   }
 
   .spoc-contact img {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
+    min-height: 60px !important;
+    max-height: 60px !important;
+    flex-basis: 60px !important;
   }
 }
