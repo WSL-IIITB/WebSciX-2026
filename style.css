@@ -1112,3 +1112,68 @@ body::before {
     background-color: #a78348;
     color: #ffffff;
 }
+.spoc-contact {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 35px;
+  padding: 18px 0;
+  border-top: 1px solid #e8e1d3;
+  border-bottom: 1px solid #e8e1d3;
+}
+
+.spoc-contact img {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.spoc-contact-text span {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #98752c;
+  margin-bottom: 3px;
+}
+
+.spoc-contact-text strong {
+  display: block;
+  font-size: 13px;
+  color: #173d3b;
+  margin-bottom: 3px;
+}
+
+.spoc-contact-text p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #777;
+}
+
+.spoc-contact-text a {
+  color: #173d3b;
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+.spoc-contact-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .spoc-contact {
+    align-items: flex-start;
+  }
+
+  .spoc-contact img {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+}
