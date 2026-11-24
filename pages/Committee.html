@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +82,6 @@
   border-radius: 6px;
   padding: 24px 28px;
   margin-top: 32px;
-  border-left: 4px solid var(--gold);
 }
 
 .pc-note h4 {
@@ -91,6 +89,70 @@
   font-size: 17px;
   color: var(--navy);
   margin-bottom: 8px;
+}
+
+/* Programme Committee member list — no profile photos */
+
+.pc-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 22px;
+  border: 1px solid #e8e1d3;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.pc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 760px;
+}
+
+.pc-table th {
+  background: #173d3b;
+  color: #fff;
+  text-align: left;
+  padding: 13px 14px;
+  font-size: 11px;
+  letter-spacing: .04em;
+}
+
+.pc-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee8dd;
+  color: #555;
+  line-height: 1.6;
+  vertical-align: top;
+}
+
+.pc-table tbody tr:nth-child(even) {
+  background: #faf8f3;
+}
+
+.pc-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.pc-table .pc-name {
+  color: var(--navy);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.pc-table a {
+  color: #173d3b;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.pc-table a:hover {
+  text-decoration: underline;
+}
+
+.pc-email-unavailable {
+  color: #999;
+  font-style: italic;
 }
 
 /* Conference SPOC */
@@ -468,16 +530,154 @@
           <h4>Programme Committee</h4>
 
           <p style="font-size:14px;color:#666;line-height:1.7;">
-            The Programme Committee comprises researchers and
-            academics responsible for the peer-review process,
-            research track evaluation and technical programme
-            development for WebSciX 2026.
+            The Programme Committee comprises researchers and academics
+            responsible for the peer-review process, research track evaluation
+            and technical programme development for WebSciX 2026.
           </p>
 
-          <p style="font-size:13px;color:#888;margin-top:10px;">
-            Programme Committee member details will be updated here.
-          </p>
+        </div>
 
+        <div class="pc-table-wrap">
+          <table class="pc-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Role / Designation</th>
+                <th>Affiliation</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td class="pc-name">Pooja Bassin</td>
+                <td>Researcher</td>
+                <td>International Institute of Information Technology Bangalore (IIITB)</td>
+                <td><a href="mailto:pooja.bassin@iiitb.ac.in">pooja.bassin@iiitb.ac.in</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Ashutosh Kumar Dubey</td>
+                <td>Assistant Professor</td>
+                <td>Shiv Nadar University Chennai</td>
+                <td><a href="mailto:akdubey@snuchennai.edu.in">akdubey@snuchennai.edu.in</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Srinath Srinivasa</td>
+                <td>Full Professor</td>
+                <td>International Institute of Information Technology Bangalore (IIITB)</td>
+                <td><a href="mailto:sri@iiitb.ac.in">sri@iiitb.ac.in</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Roshni Chakraborty</td>
+                <td>Assistant Professor</td>
+                <td>Atal Bihari Vajpayee Indian Institute of Information Technology and Management Gwalior</td>
+                <td><a href="mailto:roshni@iiitm.ac.in">roshni@iiitm.ac.in</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Raksha Pavagada Subbanarasimha</td>
+                <td>Researcher</td>
+                <td>Accenture Technology Labs</td>
+                <td><a href="mailto:raksha.p.s@accenture.com">raksha.p.s@accenture.com</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Tejas Kotha</td>
+                <td>Postdoc</td>
+                <td>Aalto University</td>
+                <td><a href="mailto:tejas.kotha@aalto.fi">tejas.kotha@aalto.fi</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Pushkal Agarwal</td>
+                <td>Lead Data Scientist</td>
+                <td>LSEG, London</td>
+                <td><a href="mailto:pushkalagarwal@gmail.com">pushkalagarwal@gmail.com</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Sakthi Balan Muthiah</td>
+                <td>Full Professor</td>
+                <td>Shiv Nadar University Chennai</td>
+                <td><a href="mailto:sakthibalanm@snuchennai.edu.in">sakthibalanm@snuchennai.edu.in</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Praseeda</td>
+                <td>Researcher</td>
+                <td>Acsel Technology Forum</td>
+                <td><span class="pc-email-unavailable">Not listed</span></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Spurthi Tallam</td>
+                <td>Senior Software Engineer (Applied AI/ML)</td>
+                <td>LePrix</td>
+                <td><a href="mailto:spurthitallam@gmail.com">spurthitallam@gmail.com</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Mandar R. Mutalikdesai</td>
+                <td>Full Professor</td>
+                <td>J.P. Morgan Chase</td>
+                <td><span class="pc-email-unavailable">Not listed</span></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Nirmal Kumar Sivaraman</td>
+                <td>Assistant Professor</td>
+                <td>The LNM Institute of Information Technology</td>
+                <td><a href="mailto:nirmal.sivaraman@lnmiit.ac.in">nirmal.sivaraman@lnmiit.ac.in</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Arpita Soni</td>
+                <td>Group Project Manager</td>
+                <td>Infosys Limited</td>
+                <td><a href="mailto:arpitasoniofficial@gmail.com">arpitasoniofficial@gmail.com</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Shalini Jangra</td>
+                <td>Assistant Professor</td>
+                <td>Shiv Nadar University Chennai</td>
+                <td><a href="mailto:shalini@snuchennai.edu.in">shalini@snuchennai.edu.in</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Rashmi Pavagada Subbanarasimha</td>
+                <td>Principal Researcher</td>
+                <td>Indian Institute of Management Bangalore</td>
+                <td><span class="pc-email-unavailable">Not listed</span></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Sanket Patil</td>
+                <td>Instructor</td>
+                <td>International Institute of Information Technology Bangalore (IIITB)</td>
+                <td><span class="pc-email-unavailable">Not listed</span></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Manas Gaur</td>
+                <td>Assistant Professor</td>
+                <td>University of Maryland, Baltimore County</td>
+                <td><a href="mailto:manas@umbc.edu">manas@umbc.edu</a></td>
+              </tr>
+
+              <tr>
+                <td class="pc-name">Bidisha Chaudhuri</td>
+                <td>Assistant Professor</td>
+                <td>University of Amsterdam</td>
+                <td><a href="mailto:b.chaudhuri@uva.nl">b.chaudhuri@uva.nl</a></td>
+              </tr>
+
+            </tbody>
+          </table>
         </div>
 
       </div>
@@ -552,4 +752,3 @@
 </div>
 </body>
 </html>
-
